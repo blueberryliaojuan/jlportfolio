@@ -1,6 +1,6 @@
-import Home from "../page/Home";
+import Home from "@/pages/Home";
 // import Products from "../page/Products";
-import NotFound from "../page/NotFound";
+import NotFound from "@/pages/NotFound";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([

@@ -34,12 +34,3 @@
 ---
 
 ## Challenges and what I Learned:
-
-1. It took me some time to get used the tailwind, as I did not use it before. I tried to use customised css variables but failed to use className like "color-primary", then I used inline style instead
-   (eg. {
-   color: favorite ? "var(--primary-color)" : "var(--secondary-color)",
-   })
-2. I learned that the higher verion of react-router-dom uses RouterProvider, so I tried in this project
-3. learned about the way to use ionIcons in the react, I made some mistakes on how to import css, finally found that I can use them as components, like <IonIcon icon={heartOutline} className="text-lg" />
-4. the state management of react is very similar to Vue, so I got used to it quickly
-5. I tried to use JSON server to store my data, but run out of time, I will try in next assignment
