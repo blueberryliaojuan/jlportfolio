@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+:root {
+  --klein-color: #002fa7;
+  --battleship-color: #898980;
+  --chartreuse-color: #e8fe63;
+  --eerie-color: #252525;
+  --white-color: #fefefe;
+}
