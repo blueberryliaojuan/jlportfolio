@@ -5,12 +5,9 @@ const NotFound = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <img src="public/assets/images/flowerlogo.png" alt="flower" />
-      <h1
-        className="text-6xl font-bold text-deepRed mb-4 py-7"
-        style={{ color: "#ECBEC9" }}
-      >
+    <div className="flex flex-col items-center justify-center h-screen bg-whitish">
+      <img src="/assets/images/logo.png" alt="JL logo" />
+      <h1 className="text-6xl font-bold text-deepRed mb-4 py-7 text-klein-900">
         404
       </h1>
       <p className="text-lg text-gray-600 mb-6">
@@ -18,8 +15,7 @@ const NotFound = () => {
       </p>
       <button
         onClick={() => navigate("/")}
-        className="px-6 py-2  text-white rounded-lg  transition"
-        style={{ backgroundColor: "#B13A2F", color: "#ECBEC9" }}
+        className="px-6 py-2  text-whitish rounded-lg  transition bg-klein-900 cursor-pointer"
       >
         Go Back Home
       </button>

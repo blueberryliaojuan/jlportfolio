@@ -1,0 +1,49 @@
+import AnimatedTitle from "@/components/common/AnimatedTitle.jsx";
+function Education() {
+  const academicDetails = [
+    {
+      date: "2024.05-2025.12",
+      title: "New Media Design and Web Development",
+      institution: "BCIT (Vancouver, BC)",
+    },
+    {
+      date: "2019.09-2020.06",
+      title: "Front-End Development",
+      institution: "GuoXinAn Information Industry Base (Chengdu, China)",
+    },
+    {
+      date: "1998.09-2001.06",
+      title: "Computer Application and Maintenance",
+      institution:
+        "University of Shanghai for Science and Technology (Shanghai, China)",
+    },
+  ];
+
+  return (
+    <div className="bg-gray-100 min-h-screen py-12">
+      <div className="container mx-auto px-12">
+        {/* <h2 className="text-2xl font-bold text-blue-900 mb-6 relative">
+          Academic Background
+          <span className="absolute -bottom-2 left-0 w-40 h-1 bg-canary-300"></span>
+        </h2> */}
+        <AnimatedTitle title="Academic Background" />
+
+        <div className="space-y-6 mt-8">
+          {academicDetails.map((item, index) => (
+            <div
+              key={index}
+              className="p-6 bg-white rounded-lg border border-gray-200"
+            >
+              <p className="text-sm text-gray-500 mb-2">{item.date}</p>
+              <h3 className="text-lg font-semibold text-blue-900">
+                {item.title}
+              </h3>
+              <p className="text-sm text-gray-600">{item.institution}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+export default Education;

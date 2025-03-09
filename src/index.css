@@ -1,9 +1,39 @@
 @import "tailwindcss";
+/* @import "tailwindcss/base"; /* 自动包含基础样式 */
+/* @import "tailwindcss/components"; 自动包含组件样式 */
+/* @import "tailwindcss/utilities"; */
 
-:root {
-  --klein-color: #002fa7;
-  --battleship-color: #898980;
-  --chartreuse-color: #e8fe63;
-  --eerie-color: #252525;
-  --white-color: #fefefe;
+*/ :root {
+  /* --klein-900: #002fa7;
+  --klein-600: #0050ff;
+  --whitish: #fefefe;
+  --stack-200: #cacac5;
+  --stack-400: #898980;
+  --canary-300: #e8fe63;
+  --canary-400: #d5f526;
+  --canary-500: #b7db07;
+  --dark: #252525; */
+}
+
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --font-poppins: Poppins, sans-serif;
+  --breakpoint-3xl: 1920px;
+  --color-avocado-100: oklch(0.99 0 0);
+  --color-avocado-200: oklch(0.98 0.04 113.22);
+  --color-avocado-300: oklch(0.94 0.11 115.03);
+  --color-avocado-400: oklch(0.92 0.19 114.08);
+  --color-avocado-500: oklch(0.84 0.18 117.33);
+  --color-avocado-600: oklch(0.53 0.12 118.34);
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  --color-klein-900: #002fa7;
+  --color-klein-600: #0050ff;
+  --color-whitish: #fefefe;
+  --color-stack-200: #cacac5;
+  --color-stack-400: #898980;
+  --color-canary-300: #e8fe63;
+  --color-canary-400: #d5f526;
+  --color-canary-500: #b7db07;
+  --color-dark: #252525;
 }
