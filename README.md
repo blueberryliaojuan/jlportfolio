@@ -1,4 +1,4 @@
-# Juan Liao Portfolio
+# Juan Liao Portfolio ![Company Logo](assets/images/logo.png)
 
 **React + Vite Project**
 

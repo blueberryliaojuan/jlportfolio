@@ -22,12 +22,7 @@ function Education() {
   return (
     <div className="bg-gray-100 min-h-screen py-12">
       <div className="container mx-auto px-12">
-        {/* <h2 className="text-2xl font-bold text-blue-900 mb-6 relative">
-          Academic Background
-          <span className="absolute -bottom-2 left-0 w-40 h-1 bg-canary-300"></span>
-        </h2> */}
         <AnimatedTitle title="Academic Background" />
-
         <div className="space-y-6 mt-8">
           {academicDetails.map((item, index) => (
             <div
