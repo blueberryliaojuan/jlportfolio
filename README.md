@@ -1,4 +1,6 @@
-# Juan Liao Portfolio ![Company Logo](./public/assets/images/logo.png)
+![Logo](./public/assets/images/logo.png)
+
+# Juan Liao Portfolio
 
 **React + Vite Project**
 
@@ -21,7 +23,7 @@
 - CSS: [tailwindcss](https://tailwindcss.com/)
 - Router: [react-router-dom]（https://www.npmjs.com/package/react-router-dom）
 <!-- - classname: [classnames](https://www.npmjs.com/package/classnames) -->
-- Font Awesome：[ionicons](https://docs.fontawesome.com/web/use-with/react)
+- Icon：[Font Awesome](https://fontawesome.com/)
 - JSON Server: [typicode/json-server](https://github.com/typicode/json-server)
 
 ### Installation Steps:
