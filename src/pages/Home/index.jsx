@@ -78,7 +78,7 @@ const home = () => {
                 <div className="flex items-center justify-center w-16 h-16 bg-canary-300 rounded-full mb-4">
                   <FontAwesomeIcon
                     icon={stat.icon}
-                    className="text-klein-900 text-2xl"
+                    className="text-klein-900 text-xl"
                   />
                 </div>
                 <h2 className="text-3xl font-bold text-klein-900">
