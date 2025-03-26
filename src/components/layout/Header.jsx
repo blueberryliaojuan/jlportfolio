@@ -23,7 +23,7 @@ const Header = () => {
 
     // 判断路径是否以指定路径开头（用于其他链接）
     if (path !== "/" && location.pathname.startsWith(path)) {
-      console.log("其他页");
+      console.log("Other pages");
       console.log("location.pathname", location.pathname);
       console.log("path", path);
       return "hover:bg-canary-300 text-klein-900 p-2 rounded-md bg-canary-300";
@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   return (
-    <header className="p-4 flex items-center bg-whitish  h-20">
+    <header className="p-4 flex items-center bg-whitish h-20 lg:h-32">
       <div className="container mx-auto max-w-screen-xl flex justify-between items-center">
         {/* Logo Section */}
         <div className="text-2xl font-bold">

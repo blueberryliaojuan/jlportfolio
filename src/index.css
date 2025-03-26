@@ -1,24 +1,36 @@
 @import "tailwindcss";
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&family=Happy+Monkey&display=swap");
+
 @theme {
-  --font-display: "Satoshi", "sans-serif";
-  --font-poppins: Poppins, sans-serif;
+  --font-roboto: "Roboto Flex", "sans-serif";
+  --font-happyMonkey: "Happy Monkey", "cursive";
   --breakpoint-3xl: 1920px;
-  --color-avocado-100: oklch(0.99 0 0);
-  --color-avocado-200: oklch(0.98 0.04 113.22);
-  --color-avocado-300: oklch(0.94 0.11 115.03);
-  --color-avocado-400: oklch(0.92 0.19 114.08);
-  --color-avocado-500: oklch(0.84 0.18 117.33);
-  --color-avocado-600: oklch(0.53 0.12 118.34);
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
   --color-klein-900: #002fa7;
   --color-klein-600: #0050ff;
-  --color-whitish: #fefefe;
   --color-stack-200: #cacac5;
   --color-stack-400: #898980;
   --color-canary-300: #e8fe63;
   --color-canary-400: #d5f526;
   --color-canary-500: #b7db07;
+  --color-whitish: #fefefe;
   --color-dark: #252525;
+}
+
+@layer components {
+  .heading1 {
+    @apply text-3xl  sm:text-4xl md:text-6xl lg:text-6xl font-bold;
+  }
+  .heading2 {
+    @apply text-xl sm:text-3xl md:text-4xl lg:text-4xl font-bold;
+  }
+  .heading5 {
+    @apply text-lg;
+  }
+
+  .btn {
+    @apply gap-2 bg-canary-300 text-klein-900 font-semibold py-2 px-6 rounded-full hover:bg-canary-400;
+  }
 }

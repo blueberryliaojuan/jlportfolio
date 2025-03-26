@@ -35,22 +35,24 @@ const home = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-1 bg-gray-100">
-        <div className="flex w-full justify-between items-center py-12">
-          <div className="flex flex-col items-start justify-center  bg-gray-100 p-4 pl-60 w-7/12">
+      <main className="flex flex-1 flex-col bg-gray-100">
+        <div className="flex-1 mx-auto max-w-screen-xl flex flex-col-reverse md:flex-row w-full justify-between items-center ">
+          <div className="flex flex-col items-start justify-center  bg-gray-100  w-7/12 m-24">
             {/* Title */}
-            <h1 className="text-4xl font-bold text-klein-900 mb-4">
+            <h1 className=" heading2 text-klein-900 mb-4">
               Front-End Developer
             </h1>
 
             {/* Subtitle */}
             <div className="mb-6">
-              <p className="text-5xl font-light text-stack-400 ">Hello I'm</p>
-              <p className="text-6xl font-bold text-klein-900 ">Juan</p>
+              <p className="heading1 font-happyMonkey text-stack-400 ">
+                Hello I'm
+              </p>
+              <p className="heading1 font-happyMonkey text-klein-900 ">Juan</p>
             </div>
 
             {/* Description */}
-            <p className="text-lg text-stack-400 mb-8">
+            <p className=" text-stack-400 mb-8">
               Designing digital experiences, crafting visual stories.
             </p>
 
@@ -58,17 +60,17 @@ const home = () => {
             <a
               href="/path-to-your-cv.pdf"
               download
-              className="flex items-center gap-2 bg-canary-300 text-klein-900 font-semibold py-2 px-6 rounded-full hover:bg-canary-400"
+              className="flex items-center btn "
             >
               <FontAwesomeIcon icon={faDownload} className="w-6 h-6" />
               Download my CV
             </a>
           </div>
-          <div className="flex items-center justify-center w-5/12">
+          <div className="flex items-center justify-center w-5/12 m-32 md:m-24">
             <img src="/assets/images/logo.png" alt="" className="h-24 w-24" />
           </div>
         </div>
-        <div className="py-12">
+        <div className="py-12 px-24 sm:px-12 xl:px-0">
           <div className="container mx-auto max-w-screen-xl grid sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
             {stats.map((stat, index) => (
               <div
