@@ -11,7 +11,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation(); // 获取当前路径
 
-  // Handle menu state when it's toggled
+  // Handle menu state when it's toggled open or closed
   const handleStateChange = (state) => {
     setMenuOpen(state.isOpen);
   };
