@@ -16,7 +16,7 @@ const Header = () => {
     setMenuOpen(state.isOpen);
   };
 
-  // 函数：根据当前路径设置 active
+  // 根据当前路径设置 active
   const getLinkClassName = (path) => {
     // console.log("location.pathname", location.pathname);
     // console.log("path", path);
