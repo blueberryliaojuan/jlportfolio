@@ -2,14 +2,21 @@ import React, { useState, useRef, useEffect } from "react";
 
 const tabs = ["All", "Software Development", "UI/UX Design & Others"];
 
-const TabSlider = () => {
-  const [activeTab, setActiveTab] = useState(0);
+const TabSlider = ({ initialActiveTab = 0, onTabChange }) => {
+  // ✅ 正确解构 props
+  const [activeTab, setActiveTab] = useState(initialActiveTab);
   const [sliderStyle, setSliderStyle] = useState({});
   const tabsRef = useRef([]);
 
+  // 当 activeTab 变化时，更新滑动条样式
   useEffect(() => {
     updateSliderStyle(activeTab);
   }, [activeTab]);
+
+  // ✅ 监听外部传入的 initialActiveTab 变化，确保同步
+  useEffect(() => {
+    setActiveTab(initialActiveTab);
+  }, [initialActiveTab]);
 
   const updateSliderStyle = (index) => {
     if (tabsRef.current[index]) {
@@ -23,6 +30,9 @@ const TabSlider = () => {
 
   const handleTabClick = (index) => {
     setActiveTab(index);
+    if (onTabChange) {
+      onTabChange(index); // ✅ 通知父组件当前选中的 Tab
+    }
   };
 
   return (

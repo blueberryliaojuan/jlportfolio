@@ -28,7 +28,7 @@ const Header = () => {
       console.log("path", path);
       return "hover:bg-canary-300 text-klein-900 p-2 rounded-md bg-canary-300";
     }
-    // 默认返回正常样式
+    //默认返回正常样式
     return "hover:bg-canary-300 text-klein-900 p-2 rounded-md";
   };
 
@@ -90,7 +90,7 @@ const Header = () => {
         {/* Social and Contact Icons */}
         <div className="flex items-center space-x-4">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/juan-liao-5711072b6/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-klein-900 hover:text-klein-600"
@@ -98,7 +98,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faLinkedin} className="text-3xl" />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/blueberryliao/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-klein-900 hover:text-klein-600"
@@ -106,7 +106,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faInstagram} className="text-3xl" />
           </a>
           <a
-            href="tel:+123456789"
+            href="tel:6047249688"
             className="text-klein-900 hover:text-klein-600"
           >
             <FontAwesomeIcon icon={faPhone} className="text-2xl" />
