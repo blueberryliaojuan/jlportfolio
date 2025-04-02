@@ -76,7 +76,7 @@ export default function About() {
               My Value
             </h2>
             <div className="grid sm:grid-cols-3 gap-16">
-              <div className="p-12 border rounded-lg border-klein-900 border-2">
+              <div className="p-12  rounded-lg border-klein-900 border-2">
                 <h3 className="heading3 font-bold text-center text-klein-900 mb-8">
                   Faith & Compassion
                 </h3>
@@ -89,7 +89,7 @@ export default function About() {
                   authentic connections with those around me.
                 </p>
               </div>
-              <div className="p-12 border rounded-lg border-klein-900 border-2">
+              <div className="p-12 rounded-lg border-klein-900 border-2">
                 <h3 className="heading3 font-bold text-center text-klein-900 mb-8">
                   Continuous Growth
                 </h3>
@@ -103,7 +103,7 @@ export default function About() {
                   well-rounded solutions.
                 </p>
               </div>
-              <div className="p-12 border rounded-lg border-klein-900 border-2">
+              <div className="p-12 rounded-lg border-klein-900 border-2">
                 <h3 className="heading3 font-bold text-center text-klein-900 mb-8">
                   Empowering Others
                 </h3>
