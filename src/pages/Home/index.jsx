@@ -75,7 +75,6 @@ const home = () => {
               src="/img/photo.jpg"
               alt="portrait"
             />
-            {/* <img src="/assets/images/logo.png" alt="" className="h-24 w-24" /> */}
           </div>
         </div>
         <div className="py-12 px-8 sm:px-12 xl:px-0">

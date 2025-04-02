@@ -7,7 +7,7 @@ import Experience from "@/pages/Resume/Experience";
 import Education from "@/pages/Resume/Education";
 import Skills from "@/pages/Resume/Skills";
 import About from "@/pages/Resume/About";
-import SufficientGround from "@/pages/Work/SufficientGround";
+import SufficientGrounds from "@/pages/Work/SufficientGrounds";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
     element: <Work />,
   },
   {
-    path: "/work/SufficientGround",
-    element: <SufficientGround />,
+    path: "/work/SufficientGrounds",
+    element: <SufficientGrounds />,
   },
   {
     path: "/service",

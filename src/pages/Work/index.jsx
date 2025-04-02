@@ -20,7 +20,7 @@ const allData = [
       "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
     demo: "https://sufficientgrounds.juanliao.net/",
     github: "/work",
-    detailPage: "/works/sufficientGrounds",
+    detailPage: "/work/SufficientGrounds",
     image: "/img/sufficientGroundsMock00.jpg",
   },
   {
@@ -135,12 +135,19 @@ const ProjectShowcase = () => {
   };
 
   // 更新鼠标位置
+  const [buttonVisible, setButtonVisible] = useState(false);
   const handleMouseMove = (e) => {
+    // const rect = e.currentTarget.getBoundingClientRect();
+    // setButtonPosition({
+    //   x: e.clientX - rect.left,
+    //   y: e.clientY - rect.top,
+    // });
     const rect = e.currentTarget.getBoundingClientRect();
     setButtonPosition({
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
     });
+    setButtonVisible(true); // 鼠标在图片上时，显示按钮
   };
 
   return (
@@ -214,25 +221,35 @@ const ProjectShowcase = () => {
 
           {/* Right Section */}
           <div
-            className="flex-2 flex flex-col items-center justify-center relative"
+            className="flex-2 flex flex-col items-center justify-center group relative "
             onMouseMove={handleMouseMove}
+            onMouseLeave={() => setButtonVisible(false)}
           >
-            <img
-              src={filteredData[currentProjectIndex].image}
-              alt={filteredData[currentProjectIndex].name}
-              className="w-3/4 rounded-lg "
-            />
-            {/* 按钮：仅在 hover 时显示，并跟随鼠标 */}
-            <button
-              className="absolute bg-lime-400 px-4 py-2 rounded-full text-blue-800 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              style={{
-                top: `${buttonPosition.y}px`,
-                left: `${buttonPosition.x}px`,
-                transform: "translate(-50%, -50%)", // centered
-              }}
+            <Link
+              to={filteredData[currentProjectIndex].detailPage}
+              className="w-3/4 "
             >
-              Click to Browse
-            </button>
+              <img
+                src={filteredData[currentProjectIndex].image}
+                alt={filteredData[currentProjectIndex].name}
+                className="rounded-lg"
+              />
+            </Link>
+            {/* 按钮：仅在 hover 时显示，并跟随鼠标 */}
+            {buttonVisible && (
+              // the button will intercept the click event, preventing the Link's click event from being triggered properly.
+              // so there is "pointer-events-none"
+              <button
+                className="absolute roundIcon bg-canary-300 opacity-80 w-20 h-20 text-klein-900  pointer-events-none"
+                style={{
+                  top: `${buttonPosition.y}px`,
+                  left: `${buttonPosition.x}px`,
+                  transform: "translate(-90%, -90%)", // position the pointer at the right bottom of the button
+                }}
+              >
+                Click to Browse
+              </button>
+            )}
           </div>
         </div>
         {/* Navigation */}
