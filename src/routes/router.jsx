@@ -8,6 +8,9 @@ import Education from "@/pages/Resume/Education";
 import Skills from "@/pages/Resume/Skills";
 import About from "@/pages/Resume/About";
 import SufficientGrounds from "@/pages/Work/SufficientGrounds";
+import DishOrdering from "@/pages/Work/DishOrdering";
+import Ines from "@/pages/Work/Ines";
+import Vgbc from "@/pages/Work/Vgbc";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -32,6 +35,18 @@ const router = createBrowserRouter([
   {
     path: "/work/SufficientGrounds",
     element: <SufficientGrounds />,
+  },
+  {
+    path: "/work/DishOrdering",
+    element: <DishOrdering />,
+  },
+  {
+    path: "/work/InesPianoAcademy",
+    element: <Ines />,
+  },
+  {
+    path: "/work/VGBC",
+    element: <Vgbc />,
   },
   {
     path: "/service",

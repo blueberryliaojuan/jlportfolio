@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
-import "./index.css";
+
 import Tab from "@/components/common/Tab";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,7 +41,7 @@ const allData = [
       "A web application that allows users to order food online. It includes a user-friendly interface, a menu display, and a shopping cart feature.",
     demo: "/work",
     github: "/work",
-    detailPage: "/works/DishOrdering",
+    detailPage: "/work/DishOrdering",
     image: "/img/orderSystemMock00.jpg",
   },
   {
@@ -63,7 +63,7 @@ const allData = [
       "A web application for a piano academy that allows users to browse courses and instructors. It includes a user-friendly interface and a responsive design.",
     demo: "/work",
     github: "/work",
-    detailPage: "/works/InesPianoAcademy",
+    detailPage: "/work/InesPianoAcademy",
     image: "/img/InesMockup00.jpg",
   },
   {
@@ -77,7 +77,7 @@ const allData = [
       "A web application for a piano academy that allows users to browse courses and instructors. It includes a user-friendly interface and a responsive design.",
     demo: "/work/vgbc",
     github: "/work",
-    detailPage: "/works/VGBC",
+    detailPage: "/work/VGBC",
     image: "/img/vgbc00.jpg",
   },
 ];
@@ -170,14 +170,14 @@ const ProjectShowcase = () => {
           {/* Left Section */}
           <div className="flex-1 space-y-4 lg:pl-16">
             <div className="space-x-4">
-              <div className="roundIcon font-bold bg-canary-300 text-klein-900 mb-4">
+              <div className="roundIcon font-bold bg-canary-300 text-klein-900 mb-2">
                 {`0${currentProjectIndex + 1}`}
               </div>
-              <h1 className="heading2 text-blue-800">
+              <h1 className="heading3 font-bold text-blue-800">
                 {filteredData[currentProjectIndex].scope}
               </h1>
 
-              <h2 className="heading3 mt-4">
+              <h2 className="heading4 mt-4">
                 {filteredData[currentProjectIndex].name}
               </h2>
             </div>
@@ -187,7 +187,7 @@ const ProjectShowcase = () => {
               {filteredData[currentProjectIndex].skills.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 border rounded-full text-sm text-blue-800 border-blue-800"
+                  className="px-3 py-1 border rounded-full text-sm text-klein-900 border-klein-900"
                 >
                   {tag}
                 </span>
@@ -198,6 +198,7 @@ const ProjectShowcase = () => {
             <div className="flex gap-4 mt-8">
               <Link
                 to={filteredData[currentProjectIndex].demo}
+                target="_blank"
                 className="btn  self-end"
               >
                 Live Demo
@@ -208,6 +209,7 @@ const ProjectShowcase = () => {
               </Link>
               <Link
                 to={filteredData[currentProjectIndex].github}
+                target="_blank"
                 className="btn  self-end"
               >
                 Github
@@ -261,7 +263,7 @@ const ProjectShowcase = () => {
             <FontAwesomeIcon icon={faArrowRight} className="-rotate-180" />
           </button>
           <button
-            className="roundIcon bg-blue-700 text-white rounded-full hover:bg-blue-800 cursor-pointer"
+            className="roundIcon bg-klein-900 text-white rounded-full hover:bg-klein-600 cursor-pointer"
             onClick={nextProject}
           >
             <FontAwesomeIcon icon={faArrowRight} />

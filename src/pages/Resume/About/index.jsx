@@ -1,10 +1,42 @@
 import AnimatedTitle from "@/components/common/AnimatedTitle.jsx";
 // import avatar from "@/assets/img/photo.jpg";
 const photos = [
-  { image: "/img/about/img01.jpg" },
-  { image: "/img/about/img03.jpg" },
-  { image: "/img/about/img02.jpg" },
-  { image: "/img/about/img04.jpg" },
+  {
+    src: "/img/about/img01.jpg",
+    alt: "Lake view",
+    cols: "col-span-2",
+    rows: "row-span-1",
+  },
+  {
+    src: "/img/about/img03.jpg",
+    alt: "Forest scene",
+    cols: "col-span-1",
+    rows: "row-span-2",
+  },
+  {
+    src: "/img/about/img02.jpg",
+    alt: "Shrimp dish",
+    cols: "col-span-1",
+    rows: "row-span-1",
+  },
+  {
+    src: "/img/about/img04.jpg",
+    alt: "Cute Oreo cake",
+    cols: "col-span-1",
+    rows: "row-span-2",
+  },
+  {
+    src: "/img/about/img04.jpg",
+    alt: "Fruit cake",
+    cols: "col-span-1",
+    rows: "row-span-1",
+  },
+  {
+    src: "/img/about/img04.jpg",
+    alt: "Noodles dish",
+    cols: "col-span-1",
+    rows: "row-span-1",
+  },
 ];
 const food = [
   { image: "/img/about/img05.jpg" },
@@ -16,13 +48,8 @@ const food = [
 export default function About() {
   return (
     <div className=" bg-gray-100 min-h-screen py-12">
-      {/* Header Section */}
-      {/* <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-blue-700">Personal Overview</h1>
-      </section> */}
       <div className="container mx-auto px-12">
         <AnimatedTitle title="Personal Overview" />
-
         <div className="bg-whitish mt-8 rounded-xl p-16">
           {/* About Me Section */}
           <section>
@@ -57,13 +84,13 @@ export default function About() {
 
           {/* Images Section */}
           <section>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16">
-              {photos.map((photo, index) => (
-                <div key={index} className="flex flex-col items-center">
+            <div className="grid grid-cols-3 gap-4 p-4 mt-16">
+              {photos.map((image, index) => (
+                <div key={index} className={`${image.cols} ${image.rows}`}>
                   <img
-                    src={photo.image}
-                    alt={photo.index}
-                    className="object-contain"
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover rounded-lg shadow-md"
                   />
                 </div>
               ))}
@@ -75,7 +102,7 @@ export default function About() {
             <h2 className="heading3 font-bold text-klein-900 my-16">
               My Value
             </h2>
-            <div className="grid sm:grid-cols-3 gap-16">
+            <div className="grid grid-cols-1   lg:grid-cols-3  gap-16">
               <div className="p-12  rounded-lg border-klein-900 border-2">
                 <h3 className="heading3 font-bold text-center text-klein-900 mb-8">
                   Faith & Compassion

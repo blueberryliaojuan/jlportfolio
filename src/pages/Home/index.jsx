@@ -7,7 +7,7 @@ import {
   faCodeBranch,
   faDownload,
 } from "@fortawesome/free-solid-svg-icons";
-import "./index.css";
+
 // import avatar from "@/assets/img/photo.jpg"; //
 const home = () => {
   const stats = [

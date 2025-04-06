@@ -15,7 +15,7 @@ const AnimatedTitle = ({ title }) => {
     <div className="w-full text-left relative">
       {/* 标题 */}
       <h1
-        className="text-2xl font-bold mb-2 relative inline-block text-klein-900"
+        className="heading2 mb-2 relative inline-block text-klein-900"
         ref={titleRef} // 引用标题文字
       >
         {title}
