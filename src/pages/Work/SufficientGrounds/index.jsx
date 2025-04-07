@@ -42,14 +42,14 @@ const SufficientGround = () => {
           <section className="p-12 flex flex-col md:flex-row items-center justify-center">
             <div className="md:w-1/2 flex justify-center">
               <img
-                src="/img/sufficientGroundsMock01.jpg"
-                alt="Project Preview"
+                src={projectData.src}
+                alt={projectData.name}
                 className="rounded-lg shadow-lg"
               />
             </div>
             <div className="md:w-1/2 text-center md:text-left p-12">
               <h2 className="heading4 font-bold text-gray-700">
-                Front-End Project
+                {projectData.scope}
               </h2>
               <h1 className="heading2 font-happyMonkey  font-bold text-klein-900 mt-4">
                 {projectData.name}

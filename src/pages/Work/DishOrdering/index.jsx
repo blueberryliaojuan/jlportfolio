@@ -11,26 +11,26 @@ import { Navigation } from "swiper/modules";
 // import { useRef, useEffect } from "react";
 
 const projectData = {
-  id: "project01",
-  name: "Sufficient Grounds Coffee Shop",
+  id: "project02",
+  name: "Dish Ordering System",
   category: "Software Development",
+  tabIndex: 1,
   scope: "Front-End Project",
-  skills: ["HTML", "CSS", "Vanilla JS", "AGILE"],
+  skills: ["HTML", "CSS", "JS", "Bootstrap", "JS Plugin", "Adobe Illustrator"],
   description:
-    "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
-  demo: "https://sufficientgrounds.juanliao.net/",
-  github: "/work",
-  src: "/img/sufficientGroundsMock00.jpg",
+    "Juan’s Kitchen is a responsive restaurant website that I designed and developed to streamline the in-house dining experience. Originally created as a basic promotional site, it has since evolved into an interactive ordering system. Customers can scan a unique QR code at their table to browse the menu, view dish photos, and place orders directly from their phones. This project demonstrates my skills in responsive design, image optimization, and front-end development using Bootstrap and JavaScript plugins.",
+  demo: "https://juanskitchen.juanliao.net/",
+  github: "https://github.com/blueberryliaojuan/Juan-s-Kitchen",
+  detailPage: "/work/DishOrdering",
+  src: "/img/orderSystemMock00.jpg",
 };
 
 const carouselImages = [
-  "/img/sufficientGroundsScreenShot01.jpg",
-  // "/img/sufficientGroundsScreenShot02.jpg",
-  "/img/sufficientGroundsScreenShot05.jpg",
-  "/img/sufficientGroundsScreenShot08.jpg",
-  "/img/sufficientGroundsScreenShot09.jpg",
+  "/img/dishOrder/dishOrdering00.jpg",
+  "/img/dishOrder/dishOrdering01.jpg",
+  "/img/dishOrder/dishOrdering02.jpg",
 ];
-const SufficientGround = () => {
+const DishOrdering = () => {
   // const prevRef = useRef(null);
   // const nextRef = useRef(null);
   return (
@@ -42,24 +42,25 @@ const SufficientGround = () => {
           <section className="p-12 flex flex-col md:flex-row items-center justify-center">
             <div className="md:w-1/2 flex justify-center">
               <img
-                src="/img/sufficientGroundsMock01.jpg"
-                alt="Project Preview"
+                src={projectData.src}
+                alt={projectData.name}
                 className="rounded-lg shadow-lg"
               />
             </div>
             <div className="md:w-1/2 text-center md:text-left p-12">
               <h2 className="heading4 font-bold text-gray-700">
-                Front-End Project
+                {projectData.scope}
               </h2>
               <h1 className="heading2 font-happyMonkey  font-bold text-klein-900 mt-4">
                 {projectData.name}
               </h1>
-              <p className=" mt-16">
+              {/* <p className=" mt-16">
                 <span className="font-semibold ">Contributors: </span> <br />{" "}
                 Juan - Web Developer, Project Manager
                 <br /> Mikhaila - Graphic Designer
-              </p>
+              </p> */}
               {/* Tag Section */}
+              <p className=" mt-16 pr-24">{projectData.description}</p>
               <div className="flex flex-wrap gap-2 mt-16">
                 {projectData.skills.map((tag) => (
                   <span
@@ -102,17 +103,19 @@ const SufficientGround = () => {
             <div className="md:w-1/2  p-16 rounded-lg ">
               <h2 className="heading2 font-bold text-klein-900">Overview</h2>
               <p className="p mt-4 text-gray-700">
-                The project aimed to create a responsive website for a coffee
-                shop, consisting of six key pages: Home, About, Menu, Products,
-                How to Brew, and Contact. The Home page introduces the brand and
-                highlights key offerings, while the About page tells the story
-                behind the coffee shop. The Menu page provides customers with
-                detailed information about the available drinks, and the
-                Products page showcases retail coffee and related items. The How
-                to Brew section offers valuable brewing tips, and the Contact
-                page allows customers to easily reach out with inquiries. Each
-                page was designed with user experience in mind, ensuring easy
-                navigation and accessibility across devices.
+                The goal of this project was to design a responsive website for
+                Juan’s Kitchen that simplifies the ordering process for
+                restaurant customers. The website aims to address common
+                challenges, such as hesitation to order unfamiliar
+                dishes—especially Chinese cuisine for Western customers—by
+                providing clear descriptions, enticing visuals, and detailed
+                information about each dish. By scanning a QR code on the table,
+                customers can access the website to browse the menu and place
+                their orders conveniently. Since most users will access the site
+                on mobile devices, it was essential to create a responsive
+                design. This project also highlights the use of Bootstrap for
+                layout and responsiveness, as well as JavaScript plugins to
+                enhance functionality and user experience.
               </p>
             </div>
           </section>
@@ -126,56 +129,80 @@ const SufficientGround = () => {
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
                 <h3 className="heading3 detail-card-title ">Feature</h3>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Intuitive Navigation
+                  Responsive Design
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  The website features a clear menu structure, making it easy
-                  for users to quickly find information across pages like Home,
-                  Menu, and Contact.
+                  Designed to work smoothly across all screen sizes—mobile,
+                  tablet, and desktop—ensuring a consistent and user-friendly
+                  experience.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Mobile Responsiveness
+                  QR Code Integration
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  The site is fully responsive, offering a seamless experience
-                  on mobile devices, ensuring functionality and a clean layout
-                  on all screen sizes.
+                  Each restaurant table has a unique QR code that links to the
+                  website and includes the table number, stored in local
+                  storage.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Easy-to-Read Content
+                  Tabbed Menu Navigation
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  I used legible fonts and high-contrast colors to ensure that
-                  all text is easy to read, improving user accessibility.
+                  The menu is organized into clear categories like Appetizers,
+                  Main Courses, and Desserts, making browsing faster and easier.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Consistent Branding
+                  Original Photography
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  The design maintains a consistent visual identity, using
-                  matching colors and fonts to reinforce the brand and create a
-                  cohesive experience.
+                  All food images are original, created and photographed by me.
+                  Images are optimized using the picture tag for better
+                  performance.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  User-Focused Navigation
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Main sections include Menu, Recommendations, About Us, Contact
+                  Us, and Find Us—focused on helping users make decisions
+                  quickly.
                 </p>
               </div>
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
                 <h3 className="heading3 detail-card-title">Function</h3>
-                <p className="p font-bold mt-4 text-gray-700">Menu Display</p>
+                <p className="p font-bold mt-4 text-gray-700">Add to Cart</p>
                 <p className="p mt-2 text-gray-700">
-                  The Menu page showcases all products in an organized,
-                  easy-to-read format, with interactive elements to enhance user
-                  engagement.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">Contact Form</p>
-                <p className="p mt-2 text-gray-700">
-                  A user-friendly form with clear fields and validation,
-                  allowing visitors to easily send inquiries.
+                  Each dish has a “+” button that adds the item to the cart. The
+                  total amount updates automatically in real time.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  How to Brew Section
+                  Cart Management
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Provides customers with helpful brewing tips, offering
-                  educational content on how to prepare their favorite coffee.
+                  Users can edit or remove items from the cart before placing an
+                  order, offering full control over the order.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">Table Tracking</p>
+                <p className="p mt-2 text-gray-700">
+                  When a user scans the QR code, their table number is saved in
+                  local storage so the system knows where the order is coming
+                  from.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Local Storage Orders
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  While no backend is connected yet, all orders and data are
+                  temporarily stored in local storage to simulate a full
+                  ordering system.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Seamless Ordering Flow
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  From scanning the QR code to browsing, selecting, and placing
+                  an order—everything happens in a smooth, intuitive flow for
+                  the customer.
                 </p>
               </div>
             </div>
@@ -213,63 +240,84 @@ const SufficientGround = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
                 <h3 className="heading3 detail-card-title ">
-                  Organization & Efficiency
+                  Clean, Efficient, and Scalable
                 </h3>
                 <p className="p font-bold mt-4 text-gray-700">
-                  CSS Optimization
+                  Modular CSS with Bootstrap
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  I utilized CSS variables to maintain consistent styling across
-                  the site, ensuring efficient updates and reducing repetitive
-                  code.
+                  Utilized Bootstrap for responsive layout and UI components,
+                  with custom CSS to match the brand's visual identity.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Reusable Functions
+                  Responsive Images
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Wrote JavaScript functions for filtering data, avoiding
-                  redundancy and improving maintainability.
+                  All food images were resized in Photoshop and implemented
+                  using the picture tag for faster loading and device-specific
+                  optimization.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Data Management
+                  Mobile-First Approach
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  I saved data in a JSON file and implemented JavaScript
-                  functions to handle data filtering, ensuring a streamlined and
-                  dynamic user experience.
+                  Designed the layout starting with mobile to ensure the best
+                  performance and user experience on smartphones and smaller
+                  screens.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Progressive Enhancement
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Built the core functionality to work even without JavaScript,
+                  layering in enhancements for modern browsers.
                 </p>
               </div>
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
                 <h3 className="heading3 detail-card-title">
-                  Development Workflow
+                  Organized and User-Focused
                 </h3>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Version Control
+                  Interactive Features with JavaScript
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Using Git, I tracked changes systematically, making it easy to
-                  manage iterations and collaborate while safeguarding progress.
+                  Used vanilla JavaScript and JS plugins for shopping cart
+                  functions, dynamic tabbed menus, and calculating totals.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Debugging and Testing
+                  Local Storage Simulation
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Employed browser developer tools and iterative testing to
-                  troubleshoot and refine features efficiently.
+                  Stored order data and table numbers in localStorage to
+                  simulate a backend system and maintain session state.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Task Management
+                  QR Code Integration
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Broke down the development process into manageable steps,
-                  staying organized and ensuring steady progress.
+                  Created QR codes for each table that store a table number
+                  locally, allowing the system to identify orders by table.
                 </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Version Control with Git
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Managed code changes and iterations through Git for an
+                  organized and trackable development process.
+                </p>
+                {/* <p className="p font-bold mt-4 text-gray-700">
+                  Design-to-Code Workflow
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Started with wireframes and mockups, then built functional
+                  pages with consistent styling and interactive behavior.
+                </p> */}
               </div>
             </div>
           </section>
 
           {/* Agile Methodology */}
-          <section className="p-12">
+          {/* <section className="p-12">
             <h2 className="heading2 detail-subtitle">Agile Methodology</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
@@ -292,11 +340,11 @@ const SufficientGround = () => {
                 </p>
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
       </main>
     </>
   );
 };
 
-export default SufficientGround;
+export default DishOrdering;

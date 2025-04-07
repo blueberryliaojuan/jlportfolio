@@ -19,7 +19,7 @@ const allData = [
     description:
       "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
     demo: "https://sufficientgrounds.juanliao.net/",
-    github: "/work",
+    github: "https://github.com/blueberryliaojuan/SufficientGround-1",
     detailPage: "/work/SufficientGrounds",
     image: "/img/sufficientGroundsMock00.jpg",
   },
@@ -39,8 +39,8 @@ const allData = [
     ],
     description:
       "A web application that allows users to order food online. It includes a user-friendly interface, a menu display, and a shopping cart feature.",
-    demo: "/work",
-    github: "/work",
+    demo: "https://juanskitchen.juanliao.net/",
+    github: "https://github.com/blueberryliaojuan/Juan-s-Kitchen",
     detailPage: "/work/DishOrdering",
     image: "/img/orderSystemMock00.jpg",
   },
@@ -61,8 +61,8 @@ const allData = [
     ],
     description:
       "A web application for a piano academy that allows users to browse courses and instructors. It includes a user-friendly interface and a responsive design.",
-    demo: "/work",
-    github: "/work",
+    demo: "https://inesacademy.juanliao.net/",
+    github: "https://github.com/blueberryliaojuan/INES",
     detailPage: "/work/InesPianoAcademy",
     image: "/img/InesMockup00.jpg",
   },
@@ -76,7 +76,8 @@ const allData = [
     description:
       "A web application for a piano academy that allows users to browse courses and instructors. It includes a user-friendly interface and a responsive design.",
     demo: "/work/vgbc",
-    github: "/work",
+    figma: "",
+    github: "#",
     detailPage: "/work/VGBC",
     image: "/img/vgbc00.jpg",
   },

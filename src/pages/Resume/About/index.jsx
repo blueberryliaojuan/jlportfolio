@@ -75,7 +75,7 @@ export default function About() {
                   alt="portrait"
                   className="rounded-full mb-4 "
                 />
-                <a href="#" className="btn mt-8">
+                <a href="/assets/cv.pdf" className="btn mt-8">
                   Download my CV
                 </a>
               </div>

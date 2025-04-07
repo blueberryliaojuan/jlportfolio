@@ -61,7 +61,7 @@ const home = () => {
 
             {/* Button */}
             <a
-              href="/path-to-your-cv.pdf"
+              href="/assets/cv.pdf"
               download
               className="flex items-center btn mt-0 lg:mt-8"
             >
