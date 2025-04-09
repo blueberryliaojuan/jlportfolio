@@ -7,8 +7,10 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
-// import { useRef, useEffect } from "react";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
+
+import "./index.css";
 
 const projectData = {
   id: "project01",
@@ -20,16 +22,51 @@ const projectData = {
     "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
   demo: "https://sufficientgrounds.juanliao.net/",
   github: "/work",
-  src: "/img/sufficientGrounds/sufficientGroundsMock00.jpg",
+  src: "/img/sufficientGrounds/sufficientGroundsMock02.jpg",
 };
 
-const carouselImages = [
-  "/img/sufficientGrounds/sufficientGroundsScreenShot01.jpg",
-  // "/img/sufficientGroundsScreenShot02.jpg",
-  "/img/sufficientGrounds/sufficientGroundsScreenShot05.jpg",
-  "/img/sufficientGrounds/sufficientGroundsScreenShot08.jpg",
-  "/img/sufficientGrounds/sufficientGroundsScreenShot09.jpg",
+const brandingImages = [
+  {
+    src: "/img/sufficientGrounds/branding.jpg",
+    alt: "Sufficient Grounds branding color palette",
+  },
+  {
+    src: "/img/sufficientGrounds/moodboard.jpg",
+    alt: "Typography design for Sufficient Grounds",
+  },
+  {
+    src: "/img/sufficientGrounds/retailCoffeeMockup.jpg",
+    alt: "Logo mockup 1 for Sufficient Grounds",
+  },
+  {
+    src: "/img/sufficientGrounds/shopMockup.jpg",
+    alt: "Logo mockup 2 for Sufficient Grounds",
+  },
+  {
+    src: "/img/sufficientGrounds/userStories.jpg",
+    alt: "Logo mockup 3 for Sufficient Grounds",
+  },
 ];
+
+const websiteImages = [
+  {
+    src: "/img/sufficientGrounds/sufficientGroundsScreenShot01.jpg",
+    alt: "Screenshot 1 of Sufficient Grounds website",
+  },
+  {
+    src: "/img/sufficientGrounds/sufficientGroundsScreenShot05.jpg",
+    alt: "Screenshot 2 of Sufficient Grounds website",
+  },
+  {
+    src: "/img/sufficientGrounds/sufficientGroundsScreenShot08.jpg",
+    alt: "Screenshot 3 of Sufficient Grounds website",
+  },
+  {
+    src: "/img/sufficientGrounds/sufficientGroundsScreenShot09.jpg",
+    alt: "Screenshot 4 of Sufficient Grounds website",
+  },
+];
+
 const SufficientGround = () => {
   // const prevRef = useRef(null);
   // const nextRef = useRef(null);
@@ -55,9 +92,15 @@ const SufficientGround = () => {
                 {projectData.name}
               </h1>
               <p className=" mt-16">
-                <span className="font-semibold ">Contributors: </span> <br />{" "}
-                Juan - Web Developer, Project Manager
-                <br /> Mikhaila - Graphic Designer
+                <span className="font-semibold mb-4">Contributors: </span>{" "}
+                <br /> Juan - Web Developer, Scrum Leader
+                <br /> Mikhaila - Graphic Designer, Content Creator
+                <Link
+                  to="https://mikhaila.ca/"
+                  className="text-klein-900 ml-4 font-light text-decoration-underline"
+                >
+                  link to her website
+                </Link>
               </p>
               {/* Tag Section */}
               <div className="flex flex-wrap gap-2 mt-16">
@@ -97,23 +140,163 @@ const SufficientGround = () => {
             </div>
           </section>
 
-          {/* Overview Section */}
-          <section className="p-12 flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/2  p-16 rounded-lg ">
-              <h2 className="heading2 font-bold text-klein-900">Overview</h2>
+          {/* Project Introduction Section */}
+          <section className="p-12 grid md:grid-cols-2 gap-8">
+            <div className="p-16  ">
+              <h2 className="heading2 font-bold text-klein-900">
+                Project Introduction
+              </h2>
               <p className="p mt-4 text-gray-700">
-                The project aimed to create a responsive website for a coffee
-                shop, consisting of six key pages: Home, About, Menu, Products,
-                How to Brew, and Contact. The Home page introduces the brand and
-                highlights key offerings, while the About page tells the story
-                behind the coffee shop. The Menu page provides customers with
-                detailed information about the available drinks, and the
-                Products page showcases retail coffee and related items. The How
-                to Brew section offers valuable brewing tips, and the Contact
-                page allows customers to easily reach out with inquiries. Each
-                page was designed with user experience in mind, ensuring easy
-                navigation and accessibility across devices.
+                The "Sufficient Grounds Coffee Shop" project was part of a
+                school assignment where we were tasked with creating a unique
+                coffee shop brand. This included branding design and website
+                development. My role as both the developer and scrum leader
+                involved leading the team and ensuring smooth collaboration,
+                while also designing and building the coffee shop's website
+                based on the brand identity my partner developed. I focused on
+                creating an engaging and functional online presence for the
+                business, ensuring it met both the brand’s vision and user
+                needs.
               </p>
+            </div>
+            <div className="p-4  flex flex-col h-full">
+              <div className="w-full h-full">
+                <img
+                  src="/img/sufficientGrounds/name.jpg"
+                  alt="introduction of brand name"
+                  className="rounded-lg "
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* design */}
+          <section className="p-12 grid md:grid-cols-2 gap-8">
+            <div className="p-4  flex flex-col h-full ">
+              <div className="w-full h-full py-8">
+                <Swiper
+                  modules={[Pagination]}
+                  pagination={{
+                    clickable: true,
+                    bulletClass: "swiper-pagination-bullet",
+                    bulletActiveClass: "swiper-pagination-bullet-active",
+                  }}
+                  spaceBetween={20}
+                  slidesPerView={1}
+                  className="h-full rounded-lg"
+                >
+                  {brandingImages.map((image, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="flex items-center justify-center h-full"
+                    >
+                      <div className="h-full flex justify-center items-center bg-gray-100">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="object-contain max-w-full max-h-full"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            </div>
+
+            <div className="  p-16  ">
+              <h2 className="heading2 font-bold text-klein-900">
+                Design Overview
+              </h2>
+              <p className="p mt-4 text-gray-700">
+                The design process was centered around crafting a modern,
+                welcoming, and accessible brand identity that resonates with the
+                target audience. The branding design, led by{" "}
+                <span className="text-klein-900">Mikhaila</span> , focused on
+                creating a cohesive visual style with an inviting color palette,
+                clean typography, and imagery that reflects the warmth and
+                quality of the coffee shop. The branding was consistently
+                applied across all touchpoints, from the logo to the website
+                interface, ensuring a unified and memorable experience for the
+                customers.
+              </p>
+            </div>
+          </section>
+
+          {/* website */}
+          <section className="p-12 grid md:grid-cols-2 gap-8">
+            <div className="  p-16  ">
+              <h2 className="heading2 font-bold text-klein-900">
+                Website Overview
+              </h2>
+              <p className="p mt-4 text-gray-700">
+                The project aimed to create a responsive website for "Sufficient
+                Grounds Coffee Shop" featuring six main pages: Home, About,
+                Menu, Products, How to Brew, and Contact.
+                <ul className="p-4">
+                  <li className="mb-1">
+                    The <span className="text-klein-900">Home</span> page serves
+                    as an introduction to the brand, showcasing the shop’s key
+                    offerings.
+                  </li>
+                  <li className="mb-1">
+                    The <span className="text-klein-900">About</span> page
+                    shares the story and mission behind the coffee shop.
+                  </li>
+                  <li className="mb-1">
+                    The <span className="text-klein-900">Menu</span> page
+                    provides customers with a comprehensive list of drinks and
+                    options available.
+                  </li>
+                  <li className="mb-1">
+                    The <span className="text-klein-900">Products</span> page
+                    highlights retail coffee and accessories for sale.
+                  </li>
+                  <li className="mb-1">
+                    The <span className="text-klein-900">How to Brew</span>{" "}
+                    section offers customers valuable tips on making the perfect
+                    brew.
+                  </li>
+                  <li>
+                    The <span className="text-klein-900">Contact</span> page
+                    enables easy customer interaction for inquiries or feedback.
+                  </li>
+                </ul>
+                I made sure that the website was designed with user experience
+                in mind, ensuring it’s easy to navigate and accessible across
+                devices, providing a seamless experience for visitors.
+              </p>
+            </div>
+
+            {/* when we use more than one Swiper, we need to assign a unique pagination element container to each <Swiper>， pagination.el property */}
+            <div className="p-4  flex flex-col h-full ">
+              <div className="w-full h-full py-8">
+                <Swiper
+                  modules={[Pagination]}
+                  pagination={{
+                    clickable: true,
+                    bulletClass: "swiper-pagination-bullet",
+                    bulletActiveClass: "swiper-pagination-bullet-active",
+                  }}
+                  spaceBetween={20}
+                  slidesPerView={1}
+                  className="h-full rounded-lg"
+                >
+                  {websiteImages.map((image, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="flex items-center justify-center h-full"
+                    >
+                      <div className="h-full flex justify-center items-center bg-gray-100">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="object-contain max-w-full max-h-full"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </section>
 
@@ -182,7 +365,7 @@ const SufficientGround = () => {
           </section>
 
           {/* Carousel*/}
-          <div className="p-12">
+          {/* <div className="p-12">
             <Swiper
               modules={[Navigation]}
               navigation
@@ -203,7 +386,7 @@ const SufficientGround = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
+          </div> */}
 
           {/* Code Practices & Workflow */}
           <section className="p-12">
@@ -273,7 +456,10 @@ const SufficientGround = () => {
             <h2 className="heading2 detail-subtitle">Agile Methodology</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <img src="/img/sufficientGroundsAgile00.jpg" alt="" />
+                <img
+                  src="/img/sufficientGrounds/sufficientGroundsAgile00.jpg"
+                  alt="agile methodology chart"
+                />
               </div>
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
                 <h3 className="heading3 detail-card-title">

@@ -3,12 +3,11 @@ import Header from "@/components/layout/Header";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
-// import { useRef, useEffect } from "react";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 
 const projectData = {
   id: "project03",
@@ -32,11 +31,51 @@ const projectData = {
 };
 
 const carouselImages = [
-  "/img/sufficientGrounds/sufficientGroundsScreenShot01.jpg",
-  "/img/sufficientGrounds/sufficientGroundsScreenShot05.jpg",
-  "/img/sufficientGrounds/sufficientGroundsScreenShot08.jpg",
-  "/img/sufficientGrounds/sufficientGroundsScreenShot09.jpg",
+  "/img/ines/color.jpg",
+  "/img/ines/typo.jpg",
+  "/img/ines/logoMockup1.jpg",
+  "/img/ines/logoMockup2.jpg",
+  "/img/ines/logoMockup3.jpg",
+  "/img/ines/logoMockup4.jpg",
+  "/img/ines/logoMockup5.jpg",
+  "/img/ines/logoMockup6.jpg",
 ];
+
+const brandingImages = [
+  {
+    src: "/img/ines/color.jpg",
+    alt: "Color palette for Ines Piano Academy branding",
+  },
+  {
+    src: "/img/ines/typo.jpg",
+    alt: "Typography design for Ines Piano Academy branding",
+  },
+  {
+    src: "/img/ines/logoMockup1.jpg",
+    alt: "Logo mockup 1 for Ines Piano Academy",
+  },
+  {
+    src: "/img/ines/logoMockup2.jpg",
+    alt: "Logo mockup 2 for Ines Piano Academy",
+  },
+  {
+    src: "/img/ines/logoMockup3.jpg",
+    alt: "Logo mockup 3 for Ines Piano Academy",
+  },
+  {
+    src: "/img/ines/logoMockup4.jpg",
+    alt: "Logo mockup 4 for Ines Piano Academy",
+  },
+  {
+    src: "/img/ines/logoMockup5.jpg",
+    alt: "Logo mockup 5 for Ines Piano Academy",
+  },
+  {
+    src: "/img/ines/logoMockup6.jpg",
+    alt: "Logo mockup 6 for Ines Piano Academy",
+  },
+];
+
 const Ines = () => {
   // const prevRef = useRef(null);
   // const nextRef = useRef(null);
@@ -106,24 +145,7 @@ const Ines = () => {
           </section>
 
           {/* Overview Section */}
-          {/* <section className="p-12 flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/2  p-16 rounded-lg ">
-              <h2 className="heading2 font-bold text-klein-900">Overview</h2>
-              <p className="p mt-4 text-gray-700">
-                The project aimed to create a responsive website for a coffee
-                shop, consisting of six key pages: Home, About, Menu, Products,
-                How to Brew, and Contact. The Home page introduces the brand and
-                highlights key offerings, while the About page tells the story
-                behind the coffee shop. The Menu page provides customers with
-                detailed information about the available drinks, and the
-                Products page showcases retail coffee and related items. The How
-                to Brew section offers valuable brewing tips, and the Contact
-                page allows customers to easily reach out with inquiries. Each
-                page was designed with user experience in mind, ensuring easy
-                navigation and accessibility across devices.
-              </p>
-            </div>
-          </section> */}
+
           <section className="p-12">
             <h2 className="heading2 detail-subtitle">Overview</h2>
             <div className="grid md:grid-cols-2 gap-8">
@@ -184,78 +206,107 @@ const Ines = () => {
           <section className="p-12">
             <h2 className="heading2 detail-subtitle">Marketing Objectives</h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title ">Primary Goal</h3>
+              <div className="p-16  flex flex-col h-full">
+                <h3 className="heading3 text-klein-900 ">
+                  Goal 1: Establish Consistent Branding
+                </h3>
 
+                <p className="p font-bold mt-4 text-gray-700">Strategy</p>
+                <p className="p mt-2 text-gray-700">Develop Visual Identity</p>
+                <p className="p font-bold mt-4 text-gray-700">Tactics</p>
                 <p className="p mt-2 text-gray-700">
-                  Establish a strong digital presence for Ines Piano Academy
-                  within 6 months by launching a fully responsive website,
-                  creating a Google Business profile, and initiating SEO
-                  practices to increase online visibility and attract new
-                  students.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">Specific</p>
-                <p className="p mt-2 text-gray-700">
-                  Create a digital home for the academy with a professional
-                  website, enhance visibility via SEO and Google Business, and
-                  present a cohesive brand.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">Measurable</p>
-                <p className="p mt-2 text-gray-700">
-                  Achieve at least 100 unique website visitors per month within
-                  3 months of launch; secure a spot on the first page of Google
-                  search results for keywords like “Vancouver piano lessons”
-                  within 4–6 months.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">Achievable</p>
-                <p className="p mt-2 text-gray-700">
-                  With website development, content creation, and SEO strategies
-                  executed on a practical timeline and budget.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">Relevant</p>
-                <p className="p mt-2 text-gray-700">
-                  Directly addresses the current lack of digital presence,
-                  helping the business grow and reach a broader audience.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">Time-bound</p>
-                <p className="p mt-2 text-gray-700">
-                  To be completed and showing measurable results by the end of 6
-                  months.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Evaluated & Reviewed
+                  Design a logo using Adobe Illustrator.
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Website analytics (via Google Analytics), keyword ranking
-                  tools, and inquiry forms will be used to assess success and
-                  make improvements.
+                  Create business cards and basic brand guidelines (fonts,
+                  colors, logo usage).
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Apply branding consistently across website and printed
+                  materials.
                 </p>
               </div>
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title">Secondary Goal</h3>
-                {/* <p className="p font-bold mt-4 text-gray-700">Menu Display</p> */}
+              <div className="p-4  flex flex-col h-full">
+                <div className="w-full h-full">
+                  <Swiper
+                    modules={[Pagination]}
+                    pagination={{ clickable: true }}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    className="h-full"
+                  >
+                    {brandingImages.map((image, index) => (
+                      <SwiperSlide
+                        key={index}
+                        className="flex items-center justify-center h-full"
+                      >
+                        <div className="h-full flex justify-center items-center bg-gray-100">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="object-contain max-w-full max-h-full"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-4  flex flex-col h-full">
+                <div className="w-full h-full">
+                  <Swiper
+                    modules={[Pagination]}
+                    pagination={{ clickable: true }}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    className="h-full"
+                  >
+                    {brandingImages.map((image, index) => (
+                      <SwiperSlide
+                        key={index}
+                        className="flex items-center justify-center h-full"
+                      >
+                        <div className="h-full flex justify-center items-center bg-gray-100">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="object-contain max-w-full max-h-full"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              </div>
+
+              <div className="p-16  flex flex-col h-full">
+                <h3 className="heading3 text-klein-900 ">
+                  Goal 2: Establish a Strong Digital Presence
+                </h3>
+                <p className="p font-bold mt-4 text-gray-700">Strategy</p>
                 <p className="p mt-2 text-gray-700">
-                  1. Establish consistent branding by creating a logo, business
-                  card, and brand identity guide by the end of Month 1.
+                  Build a Professional and Responsive Website
                 </p>
-                {/* <p className="p font-bold mt-4 text-gray-700">Contact Form</p> */}
+                <p className="p font-bold mt-4 text-gray-700">Tactics</p>
                 <p className="p mt-2 text-gray-700">
-                  2. Launch and grow a social media presence on WeChat and
-                  Xiaohongshu to engage with the academy’s predominantly
-                  Chinese-speaking audience, aiming for at least 100 organic
-                  followers and 10+ interactions per post within 2 months of
-                  launch.
-                </p>
-                {/* <p className="p font-bold mt-4 text-gray-700">
-                  How to Brew Section
-                </p> */}
-                <p className="p mt-2 text-gray-700">
-                  *WeChat, known as the ‘super app’ in China, combines
-                  messaging, social networking, mobile payments, and more.
+                  Include key sections: Mission, About, Student Showcase,
+                  Contact
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  *Xiaohongshu, also known as RED, a popular Chinese lifestyle
-                  and social e-commerce app.
+                  Add language switch (English/Chinese) to accommodate the
+                  primary audience.
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Write engaging, SEO-optimized content
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Implement contact and trial lesson forms with email capture.
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Integrate Google Analytics for visitor tracking and behavior
+                  analysis.
                 </p>
               </div>
             </div>
