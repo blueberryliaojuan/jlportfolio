@@ -20,15 +20,15 @@ const projectData = {
     "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
   demo: "https://sufficientgrounds.juanliao.net/",
   github: "/work",
-  src: "/img/sufficientGroundsMock00.jpg",
+  src: "/img/sufficientGrounds/sufficientGroundsMock00.jpg",
 };
 
 const carouselImages = [
-  "/img/sufficientGroundsScreenShot01.jpg",
+  "/img/sufficientGrounds/sufficientGroundsScreenShot01.jpg",
   // "/img/sufficientGroundsScreenShot02.jpg",
-  "/img/sufficientGroundsScreenShot05.jpg",
-  "/img/sufficientGroundsScreenShot08.jpg",
-  "/img/sufficientGroundsScreenShot09.jpg",
+  "/img/sufficientGrounds/sufficientGroundsScreenShot05.jpg",
+  "/img/sufficientGrounds/sufficientGroundsScreenShot08.jpg",
+  "/img/sufficientGrounds/sufficientGroundsScreenShot09.jpg",
 ];
 const SufficientGround = () => {
   // const prevRef = useRef(null);

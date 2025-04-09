@@ -11,26 +11,33 @@ import { Navigation } from "swiper/modules";
 // import { useRef, useEffect } from "react";
 
 const projectData = {
-  id: "project01",
-  name: "Sufficient Grounds Coffee Shop",
+  id: "project03",
+  name: "Ines Piano Academy",
   category: "Software Development",
-  scope: "Front-End Project",
-  skills: ["HTML", "CSS", "Vanilla JS", "AGILE"],
+  scope: "Front-End Project and Marketing",
+  skills: [
+    "HTML",
+    "CSS",
+    "JS",
+    "Tailwind",
+    "JS Plugin",
+    "Adobe Illustrator",
+    "Adobe Photoshop",
+  ],
   description:
-    "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
-  demo: "https://sufficientgrounds.juanliao.net/",
-  github: "/work",
-  src: "/img/sufficientGroundsMock00.jpg",
+    "This project involved designing the digital presence of Ines Piano Academy, a piano school in Vancouver with over 10 years of experience. The work included designing a cohesive brand identity, creating a modern, responsive website,  and implementing SEO strategies to increase online visibility. The website features a bilingual language switch, student showcase, and detailed program descriptions to attract and engage a diverse audience.",
+  demo: "https://inesacademy.juanliao.net/",
+  github: "https://github.com/blueberryliaojuan/INES",
+  src: "/img/ines/InesMockup00.jpg",
 };
 
 const carouselImages = [
-  "/img/sufficientGroundsScreenShot01.jpg",
-  // "/img/sufficientGroundsScreenShot02.jpg",
-  "/img/sufficientGroundsScreenShot05.jpg",
-  "/img/sufficientGroundsScreenShot08.jpg",
-  "/img/sufficientGroundsScreenShot09.jpg",
+  "/img/sufficientGrounds/sufficientGroundsScreenShot01.jpg",
+  "/img/sufficientGrounds/sufficientGroundsScreenShot05.jpg",
+  "/img/sufficientGrounds/sufficientGroundsScreenShot08.jpg",
+  "/img/sufficientGrounds/sufficientGroundsScreenShot09.jpg",
 ];
-const SufficientGround = () => {
+const Ines = () => {
   // const prevRef = useRef(null);
   // const nextRef = useRef(null);
   return (
@@ -42,22 +49,23 @@ const SufficientGround = () => {
           <section className="p-12 flex flex-col md:flex-row items-center justify-center">
             <div className="md:w-1/2 flex justify-center">
               <img
-                src="/img/sufficientGroundsMock01.jpg"
-                alt="Project Preview"
+                src={projectData.src}
+                alt={projectData.name}
                 className="rounded-lg shadow-lg"
               />
             </div>
             <div className="md:w-1/2 text-center md:text-left p-12">
               <h2 className="heading4 font-bold text-gray-700">
-                Front-End Project
+                {projectData.scope}
               </h2>
               <h1 className="heading2 font-happyMonkey  font-bold text-klein-900 mt-4">
                 {projectData.name}
               </h1>
-              <p className=" mt-16">
-                <span className="font-semibold ">Contributors: </span> <br />{" "}
+              <p className=" mt-16 pr-24">
+                {projectData.description}
+                {/* <span className="font-semibold ">Contributors: </span> <br />{" "}
                 Juan - Web Developer, Project Manager
-                <br /> Mikhaila - Graphic Designer
+                <br /> Mikhaila - Graphic Designer */}
               </p>
               {/* Tag Section */}
               <div className="flex flex-wrap gap-2 mt-16">
@@ -98,7 +106,7 @@ const SufficientGround = () => {
           </section>
 
           {/* Overview Section */}
-          <section className="p-12 flex flex-col md:flex-row items-center gap-8">
+          {/* <section className="p-12 flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2  p-16 rounded-lg ">
               <h2 className="heading2 font-bold text-klein-900">Overview</h2>
               <p className="p mt-4 text-gray-700">
@@ -114,6 +122,142 @@ const SufficientGround = () => {
                 page was designed with user experience in mind, ensuring easy
                 navigation and accessibility across devices.
               </p>
+            </div>
+          </section> */}
+          <section className="p-12">
+            <h2 className="heading2 detail-subtitle">Overview</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
+                <h3 className="heading3 detail-card-title ">Scenario</h3>
+
+                <p className="p mt-2 text-gray-700">
+                  Ines Piano Academy is a piano school based in Vancouver,
+                  Canada, founded by Ines, a passionate instructor with over 20
+                  years of teaching experience. The academy has been operating
+                  for more than a decade and offers personalized lessons for
+                  students of all ages and skill levels. While the school has
+                  established a strong reputation through word-of-mouth and
+                  local presence, its digital presence was limited, with no
+                  dedicated website or consistent online marketing.
+                </p>
+              </div>
+              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
+                <h3 className="heading3 detail-card-title">
+                  Client Position Summary
+                </h3>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Services Offered
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Piano lessons (Beginner, Intermediate, Advanced), RCM exam
+                  preparation, summer workshops, student concerts.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Pricing Strategy
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Competitive pricing with personalized lesson plans, based on
+                  lesson length and skill level. Workshop pricing is offered in
+                  bundled packages.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Competitive Environment
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Some others schools offer group and private lessons with
+                  varying levels of digital marketing, online presence, and
+                  workshop events
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Current Digital Presence:
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  No established branding or logo No official website No Google
+                  Business profile No email marketing or SEO presence Minimal
+                  social media activity
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Marketing  Objectives */}
+          <section className="p-12">
+            <h2 className="heading2 detail-subtitle">Marketing Objectives</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
+                <h3 className="heading3 detail-card-title ">Primary Goal</h3>
+
+                <p className="p mt-2 text-gray-700">
+                  Establish a strong digital presence for Ines Piano Academy
+                  within 6 months by launching a fully responsive website,
+                  creating a Google Business profile, and initiating SEO
+                  practices to increase online visibility and attract new
+                  students.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">Specific</p>
+                <p className="p mt-2 text-gray-700">
+                  Create a digital home for the academy with a professional
+                  website, enhance visibility via SEO and Google Business, and
+                  present a cohesive brand.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">Measurable</p>
+                <p className="p mt-2 text-gray-700">
+                  Achieve at least 100 unique website visitors per month within
+                  3 months of launch; secure a spot on the first page of Google
+                  search results for keywords like “Vancouver piano lessons”
+                  within 4–6 months.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">Achievable</p>
+                <p className="p mt-2 text-gray-700">
+                  With website development, content creation, and SEO strategies
+                  executed on a practical timeline and budget.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">Relevant</p>
+                <p className="p mt-2 text-gray-700">
+                  Directly addresses the current lack of digital presence,
+                  helping the business grow and reach a broader audience.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">Time-bound</p>
+                <p className="p mt-2 text-gray-700">
+                  To be completed and showing measurable results by the end of 6
+                  months.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Evaluated & Reviewed
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Website analytics (via Google Analytics), keyword ranking
+                  tools, and inquiry forms will be used to assess success and
+                  make improvements.
+                </p>
+              </div>
+              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
+                <h3 className="heading3 detail-card-title">Secondary Goal</h3>
+                {/* <p className="p font-bold mt-4 text-gray-700">Menu Display</p> */}
+                <p className="p mt-2 text-gray-700">
+                  1. Establish consistent branding by creating a logo, business
+                  card, and brand identity guide by the end of Month 1.
+                </p>
+                {/* <p className="p font-bold mt-4 text-gray-700">Contact Form</p> */}
+                <p className="p mt-2 text-gray-700">
+                  2. Launch and grow a social media presence on WeChat and
+                  Xiaohongshu to engage with the academy’s predominantly
+                  Chinese-speaking audience, aiming for at least 100 organic
+                  followers and 10+ interactions per post within 2 months of
+                  launch.
+                </p>
+                {/* <p className="p font-bold mt-4 text-gray-700">
+                  How to Brew Section
+                </p> */}
+                <p className="p mt-2 text-gray-700">
+                  *WeChat, known as the ‘super app’ in China, combines
+                  messaging, social networking, mobile payments, and more.
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  *Xiaohongshu, also known as RED, a popular Chinese lifestyle
+                  and social e-commerce app.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -221,7 +365,7 @@ const SufficientGround = () => {
                 <p className="p mt-2 text-gray-700">
                   I utilized CSS variables to maintain consistent styling across
                   the site, ensuring efficient updates and reducing repetitive
-                  code.
+                  cSectionode.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
                   Reusable Functions
@@ -267,36 +411,10 @@ const SufficientGround = () => {
               </div>
             </div>
           </section>
-
-          {/* Agile Methodology */}
-          <section className="p-12">
-            <h2 className="heading2 detail-subtitle">Agile Methodology</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <img src="/img/sufficientGroundsAgile00.jpg" alt="" />
-              </div>
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title">
-                  Development Workflow
-                </h3>
-
-                <p className="p mt-2 text-gray-700">
-                  The project followed Agile principles to ensure iterative
-                  development and continuous collaboration. Weekly sprints were
-                  used to break down the project into manageable tasks,
-                  prioritize features, and maintain progress. Regular meetings
-                  facilitated seamless communication between the designer and
-                  developer, ensuring alignment with user needs and project
-                  goals. Feedback loops allowed for quick adjustments, resulting
-                  in a more user-focused and polished website.
-                </p>
-              </div>
-            </div>
-          </section>
         </div>
       </main>
     </>
   );
 };
 
-export default SufficientGround;
+export default Ines;

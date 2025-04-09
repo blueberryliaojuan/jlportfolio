@@ -22,7 +22,7 @@ const projectData = {
   demo: "https://juanskitchen.juanliao.net/",
   github: "https://github.com/blueberryliaojuan/Juan-s-Kitchen",
   detailPage: "/work/DishOrdering",
-  src: "/img/orderSystemMock00.jpg",
+  src: "/img/dishOrder/orderSystemMock00.jpg",
 };
 
 const carouselImages = [

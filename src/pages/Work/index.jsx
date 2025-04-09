@@ -21,7 +21,7 @@ const allData = [
     demo: "https://sufficientgrounds.juanliao.net/",
     github: "https://github.com/blueberryliaojuan/SufficientGround-1",
     detailPage: "/work/SufficientGrounds",
-    image: "/img/sufficientGroundsMock00.jpg",
+    image: "/img/sufficientGrounds/sufficientGroundsMock00.jpg",
   },
   {
     id: "project02",
@@ -42,14 +42,14 @@ const allData = [
     demo: "https://juanskitchen.juanliao.net/",
     github: "https://github.com/blueberryliaojuan/Juan-s-Kitchen",
     detailPage: "/work/DishOrdering",
-    image: "/img/orderSystemMock00.jpg",
+    image: "/img/dishOrder/orderSystemMock00.jpg",
   },
   {
     id: "project03",
     name: "Ines Piano Academy",
     category: "Software Development",
     tabIndex: 1,
-    scope: "Front-End Project",
+    scope: "Front-End Project and Marketing",
     skills: [
       "HTML",
       "CSS",
@@ -64,7 +64,7 @@ const allData = [
     demo: "https://inesacademy.juanliao.net/",
     github: "https://github.com/blueberryliaojuan/INES",
     detailPage: "/work/InesPianoAcademy",
-    image: "/img/InesMockup00.jpg",
+    image: "/img/ines/InesMockup00.jpg",
   },
   {
     id: "project04",
@@ -79,7 +79,7 @@ const allData = [
     figma: "",
     github: "#",
     detailPage: "/work/VGBC",
-    image: "/img/vgbc00.jpg",
+    image: "/img/vgbc/vgbc00.jpg",
   },
 ];
 
