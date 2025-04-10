@@ -138,11 +138,6 @@ const ProjectShowcase = () => {
   // 更新鼠标位置
   const [buttonVisible, setButtonVisible] = useState(false);
   const handleMouseMove = (e) => {
-    // const rect = e.currentTarget.getBoundingClientRect();
-    // setButtonPosition({
-    //   x: e.clientX - rect.left,
-    //   y: e.clientY - rect.top,
-    // });
     const rect = e.currentTarget.getBoundingClientRect();
     setButtonPosition({
       x: e.clientX - rect.left,
@@ -167,9 +162,9 @@ const ProjectShowcase = () => {
 
         {/* Content Section */}
 
-        <div className="flex flex-1 flex-wrap items-center justify-between gap-6 mx-14 lg:mx-16">
+        <div className="flex flex-1 flex-wrap items-start justify-between gap-6 mx-14 lg:mx-16">
           {/* Left Section */}
-          <div className="flex-1 space-y-4 lg:pl-16">
+          <div className="flex-1  space-y-4 lg:pl-16 mt-40">
             <div className="space-x-4">
               <div className="roundIcon font-bold bg-canary-300 text-klein-900 mb-2">
                 {`0${currentProjectIndex + 1}`}
@@ -243,7 +238,7 @@ const ProjectShowcase = () => {
               // the button will intercept the click event, preventing the Link's click event from being triggered properly.
               // so there is "pointer-events-none"
               <button
-                className="absolute roundIcon bg-canary-300 opacity-80 w-20 h-20 text-klein-900  pointer-events-none"
+                className="absolute roundIcon bg-canary-300 opacity-80 text-sm w-16 h-16 text-klein-900  pointer-events-none"
                 style={{
                   top: `${buttonPosition.y}px`,
                   left: `${buttonPosition.x}px`,
@@ -256,15 +251,25 @@ const ProjectShowcase = () => {
           </div>
         </div>
         {/* Navigation */}
-        <div className="flex flex-2 justify-end items-start w-full mt-6 px-4 pr-60">
+        <div className="flex  h-48 justify-end items-start w-full mt-6 px-4 pr-60">
           <button
-            className="mr-4 roundIcon bg-gray-300 rounded-full text-gray-800 hover:bg-gray-400 cursor-pointer"
+            className={`mr-4 roundIcon  text-white  ${
+              filteredData.length === 1
+                ? "bg-gray-300 cursor-not-allowed"
+                : "bg-klein-900 hover:bg-klein-600 hover:text-canary-300 cursor-pointer"
+            }`}
+            disabled={filteredData.length === 1}
             onClick={previousProject}
           >
             <FontAwesomeIcon icon={faArrowRight} className="-rotate-180" />
           </button>
           <button
-            className="roundIcon bg-klein-900 text-white rounded-full hover:bg-klein-600 cursor-pointer"
+            className={`roundIcon  text-white  ${
+              filteredData.length === 1
+                ? "bg-gray-300 cursor-not-allowed"
+                : "bg-klein-900 hover:bg-klein-600 hover:text-canary-300 cursor-pointer"
+            }`}
+            disabled={filteredData.length === 1}
             onClick={nextProject}
           >
             <FontAwesomeIcon icon={faArrowRight} />

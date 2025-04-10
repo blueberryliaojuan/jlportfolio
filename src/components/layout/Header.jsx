@@ -49,8 +49,8 @@ const Header = () => {
             to="/"
             className={
               location.pathname === "/"
-                ? "bg-canary-300 text-klein-900 p-2 rounded-md"
-                : "hover:bg-canary-300  text-klein-900 p-2 rounded-md"
+                ? "header-item-active"
+                : "header-item-default"
             }
           >
             Home
@@ -59,8 +59,8 @@ const Header = () => {
             to="/service"
             className={
               location.pathname === "/service"
-                ? "bg-canary-300 text-klein-900 p-2 rounded-md"
-                : "hover:bg-canary-300  text-klein-900 p-2 rounded-md"
+                ? "header-item-active"
+                : "header-item-default"
             }
           >
             Service
@@ -69,8 +69,8 @@ const Header = () => {
             to="/resume/experience"
             className={
               location.pathname.startsWith("/resume")
-                ? "bg-canary-300 text-klein-900 p-2 rounded-md"
-                : "hover:bg-canary-300 text-klein-900 p-2 rounded-md"
+                ? "header-item-active"
+                : "header-item-default"
             }
           >
             Resume
@@ -79,8 +79,8 @@ const Header = () => {
             to="/work"
             className={
               location.pathname.startsWith("/work")
-                ? "bg-canary-300 text-klein-900 p-2 rounded-md"
-                : "hover:bg-canary-300 text-klein-900 p-2 rounded-md"
+                ? "header-item-active"
+                : "header-item-default"
             }
           >
             Work

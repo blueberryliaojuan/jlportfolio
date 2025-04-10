@@ -94,13 +94,15 @@ const SufficientGround = () => {
               <p className=" mt-16">
                 <span className="font-semibold mb-4">Contributors: </span>{" "}
                 <br /> Juan - Web Developer, Scrum Leader
-                <br /> Mikhaila - Graphic Designer, Content Creator
+                <br />{" "}
                 <Link
                   to="https://mikhaila.ca/"
-                  className="text-klein-900 ml-4 font-light text-decoration-underline"
+                  target="_blank"
+                  className="text-klein-900 font-light text-decoration-underline"
                 >
-                  link to her website
-                </Link>
+                  Mikhaila
+                </Link>{" "}
+                - Graphic Designer, Content Creator
               </p>
               {/* Tag Section */}
               <div className="flex flex-wrap gap-2 mt-16">
@@ -210,14 +212,20 @@ const SufficientGround = () => {
               <p className="p mt-4 text-gray-700">
                 The design process was centered around crafting a modern,
                 welcoming, and accessible brand identity that resonates with the
-                target audience. The branding design, led by{" "}
-                <span className="text-klein-900">Mikhaila</span> , focused on
-                creating a cohesive visual style with an inviting color palette,
-                clean typography, and imagery that reflects the warmth and
-                quality of the coffee shop. The branding was consistently
-                applied across all touchpoints, from the logo to the website
-                interface, ensuring a unified and memorable experience for the
-                customers.
+                target audience. The branding design by{" "}
+                <Link
+                  to="https://mikhaila.ca/"
+                  target="_blank"
+                  className="text-klein-900 font-light text-decoration-underline"
+                >
+                  Mikhaila
+                </Link>
+                , focused on creating a cohesive visual style with an inviting
+                color palette, clean typography, and imagery that reflects the
+                warmth and quality of the coffee shop. The branding was
+                consistently applied across all touchpoints, from the logo to
+                the website interface, ensuring a unified and memorable
+                experience for the customers.
               </p>
             </div>
           </section>

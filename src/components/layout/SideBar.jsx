@@ -42,7 +42,7 @@ const SideBar = ({ currentSection }) => {
           <li
             key={item.id}
             className={`group relative flex items-center space-x-4 px-6 py-3 cursor-pointer transition-all duration-300 ${
-              activeIndex === index ? "text-klein-900" : "text-stack-400"
+              activeIndex === index ? "text-klein-600" : "text-stack-400"
             }  hover:text-klein-900`}
             onClick={() => handleClick(item.text, index)}
           >
@@ -50,7 +50,7 @@ const SideBar = ({ currentSection }) => {
             <FontAwesomeIcon
               icon={item.icon}
               className={`text-lg  ${
-                activeIndex === index ? "text-klein-900" : "text-stack-400"
+                activeIndex === index ? "text-klein-600" : "text-stack-400"
               } group-hover:text-klein-900`}
             />
             {/* 文本 */}
