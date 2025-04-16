@@ -203,8 +203,8 @@ const Vgbc = () => {
               </div>
             </div>
 
-            <div className="p-4  flex flex-col h-full ">
-              <div className="w-full h-full py-8">
+            <div className="detail-section-item ">
+              <div className="relative max-w-full h-full py-8 overflow-hidden ">
                 <Swiper
                   modules={[Pagination]}
                   pagination={{

@@ -236,7 +236,7 @@ const Ines = () => {
                 </p>
               </div>
               <div className="detail-section-item">
-                <div className="w-full h-full">
+                <div className="relative max-w-full h-full py-8 overflow-hidden overflow-x-hidden">
                   <Swiper
                     modules={[Pagination]}
                     pagination={{ clickable: true }}
@@ -357,7 +357,7 @@ const Ines = () => {
                 </p>
               </div>
               <div className="detail-section-item">
-                <div className="w-full h-full">
+                <div className="relative max-w-full h-full py-8 overflow-hidden overflow-x-hidden">
                   <Swiper
                     modules={[Pagination]}
                     pagination={{ clickable: true }}

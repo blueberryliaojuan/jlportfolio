@@ -44,7 +44,7 @@
 [ ] All pages under 2-4 MB depending on size
 [ ] Developer console is free of errors
 [ ] PHP warnings and errors have been addressed
-[ ] CSS & JS minfied
+[ ] CSS & JS minified
 [ ] Site icon added
 [ ] Page Speed (Mobile) 50+
 [ ] Page Speed (Desktop) 75+

@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "@/components/layout/Header";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 import "./index.css";
 
@@ -174,8 +173,8 @@ const SufficientGround = () => {
 
           {/* design */}
           <section className="detail-section">
-            <div className="p-4  flex flex-col h-full ">
-              <div className="w-full h-full py-8">
+            <div className="p-4 flex flex-col h-full overflow-x-hidden ">
+              <div className="max-w-full w-full h-full py-8 overflow-hidden">
                 <Swiper
                   modules={[Pagination]}
                   pagination={{
@@ -276,8 +275,8 @@ const SufficientGround = () => {
             </div>
 
             {/* when we use more than one Swiper, we need to assign a unique pagination element container to each <Swiper>， pagination.el property */}
-            <div className="p-4  flex flex-col h-full ">
-              <div className="w-full h-full py-8">
+            <div className="p-4 flex flex-col h-full overflow-x-hidden ">
+              <div className="max-w-full w-full h-full py-8 overflow-hidden">
                 <Swiper
                   modules={[Pagination]}
                   pagination={{

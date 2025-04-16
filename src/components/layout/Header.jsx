@@ -1,90 +1,50 @@
-import { Link, useLocation } from "react-router-dom"; // for internal routing with React Router
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { slide as Menu } from "react-burger-menu";
-
-// Import Font Awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhone,
+  faEnvelope,
+  faBars,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faEnvelope, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation(); // 获取当前路径
+  const location = useLocation();
 
-  // Handle menu state when it's toggled
-  const handleStateChange = (state) => {
-    if (menuOpen !== state.isOpen) {
-      setMenuOpen(state.isOpen);
-    }
-  };
+  // 关闭菜单
+  const closeMenu = () => setMenuOpen(false);
 
-  // 根据当前路径set active
+  // 获取链接的类名，根据当前路径设置 active 状态
   const getLinkClassName = (path) => {
-    // console.log("location.pathname", location.pathname);
-    // console.log("path", path);
-
-    // 判断路径是否以指定路径开头（用于其他链接）
-    if (path !== "/" && location.pathname.startsWith(path)) {
-      console.log("Other pages");
-      console.log("location.pathname", location.pathname);
-      console.log("path", path);
-      return "hover:bg-canary-300 text-klein-900 p-2 rounded-md bg-canary-300";
-    }
-    //默认返回正常样式
-    return "hover:bg-canary-300 text-klein-900 p-2 rounded-md";
+    return location.pathname === path
+      ? "text-klein-900 bg-canary-300 px-4 py-2 rounded-md"
+      : "text-klein-900 hover:bg-canary-300 px-4 py-2 rounded-md";
   };
 
   return (
-    <header className="p-4 flex items-center bg-whitish h-20 lg:h-32">
+    <header className="p-4 bg-whitish shadow-md h-20 flex items-center">
       <div className="container mx-auto max-w-screen-xl flex justify-between items-center">
         {/* Logo Section */}
         <div className="text-2xl font-bold">
           <Link to="/">
-            <img src="/logo.png" alt="" className="h-12" />
+            <img src="/logo.png" alt="Logo" className="h-12" />
           </Link>
         </div>
 
-        {/* Navigation Links */}
-        {/* when screen is smaller than small（640px）, it will be hidden  */}
-        <nav className="space-x-6 hidden sm:flex ">
-          <Link
-            to="/"
-            className={
-              location.pathname === "/"
-                ? "header-item-active"
-                : "header-item-default"
-            }
-          >
+        {/* Desktop Navigation */}
+        <nav className="hidden sm:flex space-x-6">
+          <Link to="/" className={getLinkClassName("/")}>
             Home
           </Link>
-          <Link
-            to="/service"
-            className={
-              location.pathname === "/service"
-                ? "header-item-active"
-                : "header-item-default"
-            }
-          >
+          <Link to="/service" className={getLinkClassName("/service")}>
             Service
           </Link>
-          <Link
-            to="/resume/experience"
-            className={
-              location.pathname.startsWith("/resume")
-                ? "header-item-active"
-                : "header-item-default"
-            }
-          >
+          <Link to="/resume/experience" className={getLinkClassName("/resume")}>
             Bio
           </Link>
-          <Link
-            to="/work"
-            className={
-              location.pathname.startsWith("/work")
-                ? "header-item-active"
-                : "header-item-default"
-            }
-          >
+          <Link to="/work" className={getLinkClassName("/work")}>
             Work
           </Link>
         </nav>
@@ -97,7 +57,7 @@ const Header = () => {
             rel="noopener noreferrer"
             className="text-klein-900 hover:text-klein-600"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="text-3xl" />
+            <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
           </a>
           <a
             href="https://www.instagram.com/blueberryliao/"
@@ -105,82 +65,78 @@ const Header = () => {
             rel="noopener noreferrer"
             className="text-klein-900 hover:text-klein-600"
           >
-            <FontAwesomeIcon icon={faInstagram} className="text-3xl" />
+            <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
           </a>
           <a
             href="tel:6047249688"
             className="text-klein-900 hover:text-klein-600"
           >
-            <FontAwesomeIcon icon={faPhone} className="text-2xl" />
+            <FontAwesomeIcon icon={faPhone} className="text-xl" />
           </a>
           <a
             href="mailto:275538929@qq.com"
             className="text-klein-900 hover:text-klein-600"
           >
-            <FontAwesomeIcon icon={faEnvelope} className="text-3xl" />
+            <FontAwesomeIcon icon={faEnvelope} className="text-2xl" />
           </a>
         </div>
 
         {/* Mobile Hamburger Menu */}
-        {/* when screen is bigger than sm（640px）, it will be hidden  */}
-        <div className="sm:hidden w-8 h-8">
-          <Menu
-            right
-            isOpen={menuOpen}
-            onStateChange={handleStateChange}
-            width={"auto"}
-            customBurgerIcon={
-              <FontAwesomeIcon
-                icon={faBars} // Use FontAwesomeIcon component for the hamburger icon
-                className="text-klein-900 w-8 h-8"
-              />
-            }
-            styles={{
-              // Adjust the menu styling
-              bmMenuWrap: {
-                position: "fixed",
-                top: 0,
-                right: 0,
-                zIndex: 99999,
-              },
-              bmMenu: {
-                background: "#FEFEFE",
-                padding: "1rem",
-                fontSize: "1.15em",
-                maxHeight: "48vh", // Set the maximum height of the menu
-                overflowY: "auto", // Enable scrolling if content exceeds max height
-              },
-              bmOverlay: {
-                background: "transparent",
-                display: "none",
-              },
-              bmItemList: {
-                padding: "0.8em",
-              },
-              bmItem: {
-                display: "block",
-                textAlign: "left",
-                padding: "10px",
-              },
-            }}
+        <div className="sm:hidden">
+          <button
+            className="p-2 text-klein-900 hover:text-klein-600 focus:outline-none"
+            onClick={() => setMenuOpen(!menuOpen)}
           >
-            <Link to="/" className={getLinkClassName("/")}>
-              Home
-            </Link>
-            <Link to="/service" className={getLinkClassName("/service")}>
-              Service
-            </Link>
-            <Link
-              to="/resume/experience"
-              className={getLinkClassName("/resume")}
-            >
-              Bio
-            </Link>
-            <Link to="/work" className={getLinkClassName("/work")}>
-              Work
-            </Link>
-          </Menu>
+            <FontAwesomeIcon
+              icon={menuOpen ? faTimes : faBars}
+              className="text-3xl w-8 h-8"
+            />
+          </button>
         </div>
+
+        {/* Mobile Dropdown Menu */}
+        {menuOpen && (
+          <div className="absolute top-20 right-4 bg-white shadow-lg rounded-md w-48 z-50">
+            <ul className="flex flex-col space-y-4 p-4">
+              <li>
+                <Link
+                  to="/"
+                  className={getLinkClassName("/")}
+                  onClick={closeMenu}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/service"
+                  className={getLinkClassName("/service")}
+                  onClick={closeMenu}
+                >
+                  Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/resume/experience"
+                  className={getLinkClassName("/resume/experience")}
+                  onClick={closeMenu}
+                >
+                  Bio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/work"
+                  className={getLinkClassName("/work")}
+                  onClick={closeMenu}
+                >
+                  Work
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </header>
   );

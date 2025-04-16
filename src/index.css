@@ -58,7 +58,7 @@
     @apply p-4 lg:p-12 grid sm:grid-cols-1 lg:grid-cols-2 sm:gap-4 lg:gap-8;
   }
   .detail-section-item {
-    @apply p-4  lg:p-16  flex flex-col w-full;
+    @apply p-4  lg:p-16  flex flex-col w-full  overflow-x-hidden;
   }
   .detail-section-item:nth-of-type(2) {
     @apply mt-8 lg:mt-0;
