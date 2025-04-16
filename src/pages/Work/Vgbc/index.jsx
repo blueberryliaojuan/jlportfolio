@@ -7,7 +7,8 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 
 const projectData = {
   id: "project04",
@@ -25,12 +26,24 @@ const projectData = {
     "A web application for a piano academy that allows users to browse courses and instructors. It includes a user-friendly interface and a responsive design.",
 };
 
-const carouselImages = [
-  "/img/vgbc/vgbc01.jpg",
-  "/img/vgbc/vgbc02.jpg",
-  "/img/vgbc/vgbc03.jpg",
+const websiteImages = [
+  { src: "/img/vgbc/user-test00.jpg", alt: "User test 1" },
+  { src: "/img/vgbc/user-test01.jpg", alt: "User test 2" },
 ];
-const SufficientGround = () => {
+
+const personaImages = [
+  { src: "/img/vgbc/Persona01.png", alt: "User persona 1" },
+  { src: "/img/vgbc/Persona02.jpg", alt: "User persona 2" },
+];
+const scenarioImages = [
+  { src: "/img/vgbc/Senario01.png", alt: "User scenario 1" },
+  { src: "/img/vgbc/Senario02.jpg", alt: "User scenario 2" },
+];
+const empathyImages = [
+  { src: "/img/vgbc/empathy01.png", alt: "empathy map 1" },
+  { src: "/img/vgbc/empathy02.jpg", alt: "empathy map 2" },
+];
+const Vgbc = () => {
   // const prevRef = useRef(null);
   // const nextRef = useRef(null);
   return (
@@ -64,6 +77,11 @@ const SufficientGround = () => {
                 </span>{" "}
                 <br />{" "}
               </p> */}
+              <p className=" mt-16 mr-16">
+                VGBC, a Chinese church in Vancouver's Dunbar area with around
+                200 members, sought to create a responsive website to better
+                connect with its community.
+              </p>
               {/* Tag Section */}
               <div className="flex flex-wrap gap-2 mt-16">
                 {projectData.skills.map((tag) => (
@@ -114,172 +132,259 @@ const SufficientGround = () => {
           </section>
 
           {/* Overview Section */}
-          <section className="p-12 flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/2  p-16 rounded-lg ">
-              <h2 className="heading2 font-bold text-klein-900">Overview</h2>
+
+          <section className="p-12 grid md:grid-cols-2 gap-8">
+            <div className="  p-16  ">
+              <h2 className="heading2 font-bold text-klein-900">
+                Problem Statement
+              </h2>
               <p className="p mt-4 text-gray-700">
-                The project aimed to create a responsive website for a coffee
-                shop, consisting of six key pages: Home, About, Menu, Products,
-                How to Brew, and Contact. The Home page introduces the brand and
-                highlights key offerings, while the About page tells the story
-                behind the coffee shop. The Menu page provides customers with
-                detailed information about the available drinks, and the
-                Products page showcases retail coffee and related items. The How
-                to Brew section offers valuable brewing tips, and the Contact
-                page allows customers to easily reach out with inquiries. Each
-                page was designed with user experience in mind, ensuring easy
-                navigation and accessibility across devices.
+                VGBC, our client, does not have a website, making it challenging
+                for newcomers to access the church’s resources and essential
+                information. To address this, we conducted user testing and
+                gathered 19 feedback responses. The results revealed that most
+                users access content on mobile devices rather than desktops,
+                with the primary age group being 45–54. This insight emphasized
+                the need for a mobile-friendly website that is simple,
+                intuitive, and tailored to a more mature audience.
               </p>
+              <p className="p font-bold mt-4 text-gray-700">User Needs</p>
+              <p className="p mt-2 text-gray-700">
+                <ul>
+                  <li>
+                    Mobile-first design to ensure seamless accessibility and
+                    usability.
+                  </li>
+                  <li>
+                    Intuitive onboarding tailored for newcomers, guiding them
+                    step-by-step.
+                  </li>
+                  <li>
+                    Streamlined access to essential resources, such as planning
+                    a visit and exploring faith.
+                  </li>
+                </ul>
+              </p>
+              <p className="p font-bold mt-4 text-gray-700">
+                Business Requirements
+              </p>
+              <p className="p mt-2 text-gray-700">
+                The website design should align with VGBC’s mission of being
+                welcoming and inclusive while addressing usability issues
+                identified in user surveys. There is no strict deadline for
+                completing the project, allowing for thoughtful and
+                user-centered development.
+              </p>
+              <div className="m-8">
+                <Link
+                  to="https://docs.google.com/forms/d/e/1FAIpQLSf2Uj2Y0Ud9axaN0IyctaUC3ZqeR126KWGvI5x9aUkSim5YZQ/viewform"
+                  target="_blank"
+                  className="btn  self-end"
+                >
+                  user testing 1
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="ml-2 -rotate-45"
+                  />
+                </Link>
+              </div>
+              <div className="m-8">
+                <Link
+                  to="https://docs.google.com/forms/d/11wRS9_aB9_xROwEbnlCUPCpwyi4mla3ZKi-6TFrcYbI/edit"
+                  target="_blank"
+                  className="btn  self-end"
+                >
+                  user testing 2
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="ml-2 -rotate-45"
+                  />
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-4  flex flex-col h-full ">
+              <div className="w-full h-full py-8">
+                <Swiper
+                  modules={[Pagination]}
+                  pagination={{
+                    clickable: true,
+                    bulletClass: "swiper-pagination-bullet",
+                    bulletActiveClass: "swiper-pagination-bullet-active",
+                  }}
+                  spaceBetween={20}
+                  slidesPerView={1}
+                  className="h-full rounded-lg"
+                >
+                  {websiteImages.map((image, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="flex items-center justify-center h-full"
+                    >
+                      <div className="h-full flex justify-center items-center bg-gray-100">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="object-contain max-w-full max-h-full"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </section>
 
-          {/* Features & Functionality */}
+          {/* UI/UX */}
           <section className="p-12">
-            <h2 className="heading2 detail-subtitle">
-              Features & Functionality
-            </h2>
+            <h2 className="heading2 detail-subtitle">Process Overview</h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title ">Feature</h3>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Intuitive Navigation
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  The website features a clear menu structure, making it easy
-                  for users to quickly find information across pages like Home,
-                  Menu, and Contact.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Mobile Responsiveness
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  The site is fully responsive, offering a seamless experience
-                  on mobile devices, ensuring functionality and a clean layout
-                  on all screen sizes.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Easy-to-Read Content
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  I used legible fonts and high-contrast colors to ensure that
-                  all text is easy to read, improving user accessibility.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Consistent Branding
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  The design maintains a consistent visual identity, using
-                  matching colors and fonts to reinforce the brand and create a
-                  cohesive experience.
-                </p>
+              <div className="p-16  flex flex-col h-full">
+                <h3 className="heading3 text-klein-900 ">User Persona</h3>
+
+                <div className="w-full h-full">
+                  <Swiper
+                    modules={[Pagination]}
+                    pagination={{ clickable: true }}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    className="h-full"
+                  >
+                    {personaImages.map((image, index) => (
+                      <SwiperSlide
+                        key={index}
+                        className="flex items-center justify-center h-full"
+                      >
+                        <div className="h-full flex justify-center items-center bg-gray-100">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="object-contain max-w-full max-h-full"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
               </div>
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title">Function</h3>
-                <p className="p font-bold mt-4 text-gray-700">Menu Display</p>
-                <p className="p mt-2 text-gray-700">
-                  The Menu page showcases all products in an organized,
-                  easy-to-read format, with interactive elements to enhance user
-                  engagement.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">Contact Form</p>
-                <p className="p mt-2 text-gray-700">
-                  A user-friendly form with clear fields and validation,
-                  allowing visitors to easily send inquiries.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  How to Brew Section
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Provides customers with helpful brewing tips, offering
-                  educational content on how to prepare their favorite coffee.
-                </p>
+              <div className="p-16  flex flex-col h-full">
+                <h3 className="heading3 text-klein-900 ">User Scenario</h3>
+                <div className="w-full h-full">
+                  <Swiper
+                    modules={[Pagination]}
+                    pagination={{ clickable: true }}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    className="h-full"
+                  >
+                    {scenarioImages.map((image, index) => (
+                      <SwiperSlide
+                        key={index}
+                        className="flex items-center justify-center h-full"
+                      >
+                        <div className="h-full flex justify-center items-center bg-gray-100">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="object-contain max-w-full max-h-full"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
               </div>
             </div>
-          </section>
-
-          {/* Carousel*/}
-          <div className="p-12">
-            <Swiper
-              modules={[Navigation]}
-              navigation
-              loop
-              spaceBetween={20}
-              slidesPerView={1}
-              className="rounded-lg "
-            >
-              {carouselImages.map((src, idx) => (
-                <SwiperSlide key={idx}>
-                  <div className="aspect-[16/9] w-full">
-                    <img
-                      src={src}
-                      alt={`Slide ${idx}`}
-                      className="w-full h-full object-cover rounded-lg"
-                    />
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-16  flex flex-col h-full">
+                <h3 className="heading3 text-klein-900 ">Empathy Map</h3>
+                <div className="w-full h-full">
+                  <Swiper
+                    modules={[Pagination]}
+                    pagination={{ clickable: true }}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    className="h-full"
+                  >
+                    {empathyImages.map((image, index) => (
+                      <SwiperSlide
+                        key={index}
+                        className="flex items-center justify-center h-full"
+                      >
+                        <div className="h-full flex justify-center items-center bg-gray-100">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="object-contain max-w-full max-h-full"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              </div>
+              <div className="p-16  flex flex-col h-full">
+                <h3 className="heading3 text-klein-900 ">Journey Map</h3>
+                <div className="w-full h-full">
+                  <img src="/img/vgbc/journeyMap.jpg" alt="Journey map" />
+                </div>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-16  flex flex-col h-full">
+                <h3 className="heading3 text-klein-900 ">User Flow</h3>
+                <div className="w-full h-full">
+                  <img src="/img/vgbc/userFlow.png" alt="Journey map" />
+                </div>
+              </div>
+              <div className="p-16  flex flex-col h-full">
+                <h3 className="heading3 text-klein-900 ">User Feedback</h3>
+                <div className="w-full h-full">
+                  <div className="m-8">
+                    <Link
+                      to="https://www.figma.com/proto/8gM6LQL61OLEZai0MqE1WO/VGBC?node-id=231-559&p=f&t=TGLCxFjsdwVqEQCx-1&scaling=scale-down&content-scaling=fixed&page-id=220%3A604&starting-point-node-id=231%3A559"
+                      target="_blank"
+                      className="btn  self-end"
+                    >
+                      Prototype
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className="ml-2 -rotate-45"
+                      />
+                    </Link>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          {/* Code Practices & Workflow */}
-          <section className="p-12">
-            <h2 className="heading2 detail-subtitle">
-              Code Practices & Development Workflow
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title ">
-                  Organization & Efficiency
-                </h3>
-                <p className="p font-bold mt-4 text-gray-700">
-                  CSS Optimization
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  I utilized CSS variables to maintain consistent styling across
-                  the site, ensuring efficient updates and reducing repetitive
-                  code.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Reusable Functions
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Wrote JavaScript functions for filtering data, avoiding
-                  redundancy and improving maintainability.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Data Management
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  I saved data in a JSON file and implemented JavaScript
-                  functions to handle data filtering, ensuring a streamlined and
-                  dynamic user experience.
-                </p>
-              </div>
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title">
-                  Development Workflow
-                </h3>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Version Control
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Using Git, I tracked changes systematically, making it easy to
-                  manage iterations and collaborate while safeguarding progress.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Debugging and Testing
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Employed browser developer tools and iterative testing to
-                  troubleshoot and refine features efficiently.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Task Management
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Broke down the development process into manageable steps,
-                  staying organized and ensuring steady progress.
-                </p>
+                  {/* <p className="p font-bold mt-4 text-gray-700">Strategy</p> */}
+                  <p className="p mt-2 text-gray-700">
+                    After sharing the high-fidelity prototype for testing, I
+                    received 7 valuable pieces of feedback. Users appreciated
+                    the detailed sections, such as the sermons, video content,
+                    and calendar, and felt that the app was clear and easy to
+                    navigate. They were able to find the information they needed
+                    quickly, which was a positive response. However, they
+                    suggested a few improvements:
+                  </p>
+                  <p className="p mt-2 text-gray-700">
+                    <ul>
+                      <li>
+                        Sermon Access: Users would like the sermons to be
+                        featured on the home page for quicker access.
+                      </li>
+                      <li>
+                        Forms Organization: The contact and feedback forms could
+                        be more organized for better user experience.
+                      </li>
+                      <li>
+                        Video Section: Including testimonials within the video
+                        section would be a helpful addition.
+                      </li>
+                      <li>
+                        Content Updates: Users want to see more frequent updates
+                        to the images and videos, ensuring that content stays
+                        fresh and relevant.
+                      </li>
+                    </ul>
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -289,4 +394,4 @@ const SufficientGround = () => {
   );
 };
 
-export default SufficientGround;
+export default Vgbc;

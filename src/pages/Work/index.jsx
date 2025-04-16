@@ -65,7 +65,7 @@ const allData = [
     demo: "https://juanskitchen.juanliao.net/",
     github: "https://github.com/blueberryliaojuan/Juan-s-Kitchen",
     detailPage: "/work/DishOrdering",
-    image: "/img/dishOrder/orderSystemMock00.jpg",
+    image: "/img/dishOrder/orderSystemMock01.jpg",
   },
 
   {
@@ -81,7 +81,7 @@ const allData = [
     figma: "",
     github: "#",
     detailPage: "/work/VGBC",
-    image: "/img/vgbc/vgbc00.jpg",
+    image: "/img/vgbc/mockup00.jpg",
   },
 ];
 
