@@ -27,7 +27,7 @@ const projectData = {
     "This project involved designing the digital presence of Ines Piano Academy, a piano school in Vancouver with over 10 years of experience. The work included designing a cohesive brand identity, creating a modern, responsive website,  and implementing SEO strategies to increase online visibility. The website features a bilingual language switch, student showcase, and detailed program descriptions to attract and engage a diverse audience.",
   demo: "https://inesacademy.juanliao.net/",
   github: "https://github.com/blueberryliaojuan/INES",
-  src: "/img/ines/InesMockup00.jpg",
+  src: "/img/ines/InesMockup01.jpg",
 };
 
 const carouselImages = [
@@ -75,6 +75,24 @@ const brandingImages = [
     alt: "Logo mockup 6 for Ines Piano Academy",
   },
 ];
+const socialMediaImages = [
+  {
+    src: "/img/ines/InesMockup03.jpg",
+    alt: "social media for Ines Piano Academy",
+  },
+  {
+    src: "/img/ines/Street_Poster_Mockup02.jpg",
+    alt: "street poster for Ines Piano Academy branding",
+  },
+  {
+    src: "/img/ines/Street_Poster_Mockup03.jpg",
+    alt: "street poster for Ines Piano Academy branding",
+  },
+  {
+    src: "/img/ines/banners.jpg",
+    alt: "banners for Ines Piano Academy",
+  },
+];
 
 const Ines = () => {
   // const prevRef = useRef(null);
@@ -90,7 +108,7 @@ const Ines = () => {
               <img
                 src={projectData.src}
                 alt={projectData.name}
-                className="rounded-lg shadow-lg"
+                className="rounded-lg "
               />
             </div>
             <div className="md:w-1/2 text-center md:text-left p-12">
@@ -150,7 +168,7 @@ const Ines = () => {
             <h2 className="heading2 detail-subtitle">Overview</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title ">Scenario</h3>
+                <h3 className="heading5 detail-card-title ">Scenario</h3>
 
                 <p className="p mt-2 text-gray-700">
                   Ines Piano Academy is a piano school based in Vancouver,
@@ -164,7 +182,7 @@ const Ines = () => {
                 </p>
               </div>
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title">
+                <h3 className="heading5 detail-card-title">
                   Client Position Summary
                 </h3>
                 <p className="p font-bold mt-4 text-gray-700">
@@ -174,14 +192,7 @@ const Ines = () => {
                   Piano lessons (Beginner, Intermediate, Advanced), RCM exam
                   preparation, summer workshops, student concerts.
                 </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Pricing Strategy
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Competitive pricing with personalized lesson plans, based on
-                  lesson length and skill level. Workshop pricing is offered in
-                  bundled packages.
-                </p>
+
                 <p className="p font-bold mt-4 text-gray-700">
                   Competitive Environment
                 </p>
@@ -194,9 +205,14 @@ const Ines = () => {
                   Current Digital Presence:
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  No established branding or logo No official website No Google
-                  Business profile No email marketing or SEO presence Minimal
-                  social media activity
+                  <ul>
+                    <li>No established branding or logo</li>
+                    <li>No official website</li>
+                    <li>
+                      No email marketing or SEO presence Minimal social media
+                      activity
+                    </li>
+                  </ul>
                 </p>
               </div>
             </div>
@@ -256,28 +272,10 @@ const Ines = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-4  flex flex-col h-full">
                 <div className="w-full h-full">
-                  <Swiper
-                    modules={[Pagination]}
-                    pagination={{ clickable: true }}
-                    spaceBetween={20}
-                    slidesPerView={1}
-                    className="h-full"
-                  >
-                    {brandingImages.map((image, index) => (
-                      <SwiperSlide
-                        key={index}
-                        className="flex items-center justify-center h-full"
-                      >
-                        <div className="h-full flex justify-center items-center bg-gray-100">
-                          <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="object-contain max-w-full max-h-full"
-                          />
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
+                  <img
+                    src="/img/ines/InesMockup00.jpg"
+                    alt="responsive website design"
+                  />
                 </div>
               </div>
 
@@ -310,74 +308,170 @@ const Ines = () => {
                 </p>
               </div>
             </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-16  flex flex-col h-full">
+                <h3 className="heading3 text-klein-900 ">
+                  Goal 3: Grow Social Media Presence
+                </h3>
+
+                <p className="p font-bold mt-4 text-gray-700">Strategy</p>
+                <p className="p mt-2 text-gray-700">
+                  Engage Chinese-speaking clients through WeChat and Xiaohongshu
+                  with tailored content and promotions.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">Tactics</p>
+                <p className="p mt-2 text-gray-700">
+                  Create and set up Xiaohongshu and WeChat official accounts.
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Post 2–3 times per week: student showcases, instructor tips,
+                  upcoming events.
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Design eye-catching banners and posters featuring QR codes
+                  linked to social media and the website. These will highlight
+                  key promotions, events, and announcements to boost visual
+                  appeal and audience engagement.
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  Use hashtags like #温哥华钢琴, #PianoLessonsVancouver,
+                  #RCM备考,#RCMPrep, #InesPianoAcademy.
+                </p>
+              </div>
+              <div className="p-4  flex flex-col h-full">
+                <div className="w-full h-full">
+                  <Swiper
+                    modules={[Pagination]}
+                    pagination={{ clickable: true }}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    className="h-full"
+                  >
+                    {socialMediaImages.map((image, index) => (
+                      <SwiperSlide
+                        key={index}
+                        className="flex items-center justify-center h-full"
+                      >
+                        <div className="h-full flex justify-center items-center bg-gray-100">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="object-contain max-w-full max-h-full"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Features & Functionality */}
           <section className="p-12">
             <h2 className="heading2 detail-subtitle">
-              Features & Functionality
+              Website Features & Functionality
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
                 <h3 className="heading3 detail-card-title ">Feature</h3>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Intuitive Navigation
+                  Responsive Design
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  The website features a clear menu structure, making it easy
-                  for users to quickly find information across pages like Home,
-                  Menu, and Contact.
+                  <ul>
+                    <li>
+                      Seamless viewing across devices, including desktops,
+                      tablets, and smartphones.
+                    </li>
+                    <li>
+                      Adapts layouts and elements dynamically for optimal user
+                      experience.
+                    </li>
+                  </ul>
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Mobile Responsiveness
+                  Modern Visual Identity
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  The site is fully responsive, offering a seamless experience
-                  on mobile devices, ensuring functionality and a clean layout
-                  on all screen sizes.
+                  <ul>
+                    <li>
+                      Custom logo, colors, and typography reflecting Ines Piano
+                      Academy's branding.
+                    </li>
+                    <li>
+                      Elegant and professional design elements for visual
+                      appeal.
+                    </li>
+                  </ul>
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Easy-to-Read Content
+                  Comprehensive Program Information
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  I used legible fonts and high-contrast colors to ensure that
-                  all text is easy to read, improving user accessibility.
+                  Information on workshops, concert opportunities, and
+                  examination preparation.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Consistent Branding
+                  Student Showcase
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  The design maintains a consistent visual identity, using
-                  matching colors and fonts to reinforce the brand and create a
-                  cohesive experience.
+                  Gallery section featuring student performances, achievements,
+                  and testimonials.
                 </p>
               </div>
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
                 <h3 className="heading3 detail-card-title">Function</h3>
-                <p className="p font-bold mt-4 text-gray-700">Menu Display</p>
-                <p className="p mt-2 text-gray-700">
-                  The Menu page showcases all products in an organized,
-                  easy-to-read format, with interactive elements to enhance user
-                  engagement.
+                <p className="p font-bold mt-4 text-gray-700">
+                  Multi-Language Support
                 </p>
-                <p className="p font-bold mt-4 text-gray-700">Contact Form</p>
                 <p className="p mt-2 text-gray-700">
-                  A user-friendly form with clear fields and validation,
-                  allowing visitors to easily send inquiries.
+                  Language switch feature for accessibility in English and
+                  Chinese.
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  How to Brew Section
+                  SEO Optimization
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Provides customers with helpful brewing tips, offering
-                  educational content on how to prepare their favorite coffee.
+                  Metadata, keywords, and structured content to improve search
+                  engine visibility.
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Social Media Integration
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  <ul>
+                    <li>
+                      Links to social media platforms for enhanced engagement
+                      and reach.
+                    </li>
+                    <li>
+                      Banner ads with WeChat and website QR codes for effortless
+                      connectivity.
+                    </li>
+                  </ul>
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Performance Analytics
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  <ul>
+                    <li>
+                      Integration with Google Analytics and Google Search
+                      Console.
+                    </li>
+                    <li>
+                      Tracks traffic, user behavior, and conversion metrics to
+                      guide improvements.
+                    </li>
+                  </ul>
                 </p>
               </div>
             </div>
           </section>
 
           {/* Carousel*/}
-          <div className="p-12">
+          {/* <div className="p-12">
             <Swiper
               modules={[Navigation]}
               navigation
@@ -398,7 +492,7 @@ const Ines = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
+          </div> */}
 
           {/* Code Practices & Workflow */}
           <section className="p-12">
@@ -411,27 +505,62 @@ const Ines = () => {
                   Organization & Efficiency
                 </h3>
                 <p className="p font-bold mt-4 text-gray-700">
-                  CSS Optimization
+                  Responsive Development
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  I utilized CSS variables to maintain consistent styling across
-                  the site, ensuring efficient updates and reducing repetitive
-                  cSectionode.
+                  <ul>
+                    <li>
+                      Used Tailwind CSS for consistent, mobile-first responsive
+                      designs.
+                    </li>
+                    <li>
+                      Employed flexbox and grid layouts for precise element
+                      alignment and structure.
+                    </li>
+                  </ul>
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">Clean Code</p>
+                <p className="p mt-2 text-gray-700">
+                  <ul>
+                    <li>
+                      Organized JavaScript functions clearly for better
+                      readability.
+                    </li>
+                    <li>
+                      Followed consistent naming conventions for variables and
+                      classes to maintain clarity.
+                    </li>
+                  </ul>
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Reusable Functions
+                  Performance Optimization
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Wrote JavaScript functions for filtering data, avoiding
-                  redundancy and improving maintainability.
+                  <ul>
+                    <li>
+                      Utilized lazy loading for images to improve page load
+                      performance.
+                    </li>
+                    <li>
+                      Minimized the use of redundant CSS and JS to enhance
+                      efficiency.
+                    </li>
+                  </ul>
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Data Management
+                  Version Control
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  I saved data in a JSON file and implemented JavaScript
-                  functions to handle data filtering, ensuring a streamlined and
-                  dynamic user experience.
+                  <ul>
+                    <li>
+                      Used Git for tracking code changes with clear, descriptive
+                      commit messages.
+                    </li>
+                    <li>
+                      Managed branches effectively for testing new features
+                      before merging.
+                    </li>
+                  </ul>
                 </p>
               </div>
               <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
@@ -439,25 +568,64 @@ const Ines = () => {
                   Development Workflow
                 </h3>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Version Control
+                  Planning & Design
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Using Git, I tracked changes systematically, making it easy to
-                  manage iterations and collaborate while safeguarding progress.
+                  <ul>
+                    <li>
+                      Started with wireframes to outline the website's layout
+                      and functionality.
+                    </li>
+                    <li>
+                      Designed a clear roadmap for development tasks to maintain
+                      focus and efficiency.
+                    </li>
+                  </ul>
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Debugging and Testing
+                  Iterative Development
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Employed browser developer tools and iterative testing to
-                  troubleshoot and refine features efficiently.
+                  <ul>
+                    <li>
+                      Followed an incremental approach, building and testing one
+                      feature at a time.
+                    </li>
+                    <li>
+                      Reviewed and refined code after each stage to maintain
+                      quality and consistency.
+                    </li>
+                  </ul>
                 </p>
                 <p className="p font-bold mt-4 text-gray-700">
-                  Task Management
+                  Testing & Debugging
                 </p>
                 <p className="p mt-2 text-gray-700">
-                  Broke down the development process into manageable steps,
-                  staying organized and ensuring steady progress.
+                  <ul>
+                    <li>
+                      Conducted manual testing across different browsers and
+                      devices for compatibility.
+                    </li>
+                    <li>
+                      Used browser developer tools for debugging layout and
+                      JavaScript issues.
+                    </li>
+                  </ul>
+                </p>
+                <p className="p font-bold mt-4 text-gray-700">
+                  Deployment & Feedback
+                </p>
+                <p className="p mt-2 text-gray-700">
+                  <ul>
+                    <li>
+                      Deployed the website on a secure and reliable hosting
+                      platform.
+                    </li>
+                    <li>
+                      Collected user feedback post-launch to guide future
+                      improvements.
+                    </li>
+                  </ul>
                 </p>
               </div>
             </div>

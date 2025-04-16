@@ -10,24 +10,25 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
 const projectData = {
-  id: "project01",
-  name: "Sufficient Grounds Coffee Shop",
-  category: "Software Development",
-  scope: "Front-End Project",
-  skills: ["HTML", "CSS", "Vanilla JS", "AGILE"],
+  id: "project04",
+  name: "VGBC",
+  category: "UI/UX Design & Others",
+  demo: "",
+  github: "",
+  figma:
+    "https://www.figma.com/design/8gM6LQL61OLEZai0MqE1WO/VGBC?node-id=220-604&p=f&t=EKgEJFDvIykNSZmg-0",
+  src: "/img/vgbc/vgbc00.jpg",
+  tabIndex: 2,
+  scope: "UI/UX Design",
+  skills: ["Figma", "Adobe Illustrator"],
   description:
-    "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
-  demo: "https://sufficientgrounds.juanliao.net/",
-  github: "/work",
-  src: "/img/sufficientGroundsMock00.jpg",
+    "A web application for a piano academy that allows users to browse courses and instructors. It includes a user-friendly interface and a responsive design.",
 };
 
 const carouselImages = [
-  "/img/sufficientGroundsScreenShot01.jpg",
-  // "/img/sufficientGroundsScreenShot02.jpg",
-  "/img/sufficientGroundsScreenShot05.jpg",
-  "/img/sufficientGroundsScreenShot08.jpg",
-  "/img/sufficientGroundsScreenShot09.jpg",
+  "/img/vgbc/vgbc01.jpg",
+  "/img/vgbc/vgbc02.jpg",
+  "/img/vgbc/vgbc03.jpg",
 ];
 const SufficientGround = () => {
   // const prevRef = useRef(null);
@@ -41,23 +42,28 @@ const SufficientGround = () => {
           <section className="p-12 flex flex-col md:flex-row items-center justify-center">
             <div className="md:w-1/2 flex justify-center">
               <img
-                src="/img/sufficientGroundsMock01.jpg"
+                src={projectData.src}
                 alt="Project Preview"
-                className="rounded-lg shadow-lg"
+                className="rounded-lg "
               />
             </div>
             <div className="md:w-1/2 text-center md:text-left p-12">
               <h2 className="heading4 font-bold text-gray-700">
-                Front-End Project
+                {projectData.scope}
               </h2>
               <h1 className="heading2 font-happyMonkey  font-bold text-klein-900 mt-4">
                 {projectData.name}
               </h1>
-              <p className=" mt-16">
-                <span className="font-semibold ">Contributors: </span> <br />{" "}
-                Juan - Web Developer, Project Manager
-                <br /> Mikhaila - Graphic Designer
-              </p>
+              {/* <p className=" mt-16">
+                <span className="font-semibold ">
+                  My Role: Designer and Developer— Creating a modern and
+                  user-friendly design for the VGBC, developing features that
+                  enhance user experience, and ensuring a seamless and
+                  functional digital presence that aligns with VGBC’s mission
+                  and goals.
+                </span>{" "}
+                <br />{" "}
+              </p> */}
               {/* Tag Section */}
               <div className="flex flex-wrap gap-2 mt-16">
                 {projectData.skills.map((tag) => (
@@ -71,6 +77,17 @@ const SufficientGround = () => {
               </div>
               <div className="mt-6 flex gap-4">
                 <Link
+                  to={projectData.figma}
+                  target="_blank"
+                  className="btn  self-end"
+                >
+                  Figma
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="ml-2 -rotate-45"
+                  />
+                </Link>
+                {/* <Link
                   to={projectData.demo}
                   target="_blank"
                   className="btn  self-end"
@@ -80,8 +97,8 @@ const SufficientGround = () => {
                     icon={faArrowRight}
                     className="ml-2 -rotate-45"
                   />
-                </Link>
-                <Link
+                </Link> */}
+                {/* <Link
                   to={projectData.github}
                   target="_blank"
                   className="btn  self-end"
@@ -91,7 +108,7 @@ const SufficientGround = () => {
                     icon={faArrowRight}
                     className="ml-2 -rotate-45"
                   />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </section>

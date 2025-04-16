@@ -10,41 +10,6 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 //all the projects I have
 const allData = [
   {
-    id: "project01",
-    name: "Sufficient Grounds Coffee Shop",
-    category: "Software Development",
-    tabIndex: 1,
-    scope: "Front-End Project",
-    skills: ["HTML", "CSS", "Vanilla JS", "AGILE"],
-    description:
-      "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
-    demo: "https://sufficientgrounds.juanliao.net/",
-    github: "https://github.com/blueberryliaojuan/SufficientGround-1",
-    detailPage: "/work/SufficientGrounds",
-    image: "/img/sufficientGrounds/sufficientGroundsMock00.jpg",
-  },
-  {
-    id: "project02",
-    name: "Dish Ordering System",
-    category: "Software Development",
-    tabIndex: 1,
-    scope: "Front-End Project",
-    skills: [
-      "HTML",
-      "CSS",
-      "JS",
-      "Bootstrap",
-      "JS Plugin",
-      "Adobe Illustrator",
-    ],
-    description:
-      "A web application that allows users to order food online. It includes a user-friendly interface, a menu display, and a shopping cart feature.",
-    demo: "https://juanskitchen.juanliao.net/",
-    github: "https://github.com/blueberryliaojuan/Juan-s-Kitchen",
-    detailPage: "/work/DishOrdering",
-    image: "/img/dishOrder/orderSystemMock00.jpg",
-  },
-  {
     id: "project03",
     name: "Ines Piano Academy",
     category: "Software Development",
@@ -66,6 +31,43 @@ const allData = [
     detailPage: "/work/InesPianoAcademy",
     image: "/img/ines/InesMockup00.jpg",
   },
+  {
+    id: "project01",
+    name: "Sufficient Grounds Coffee Shop",
+    category: "Software Development",
+    tabIndex: 1,
+    scope: "Front-End Project",
+    skills: ["HTML", "CSS", "Vanilla JS", "AGILE"],
+    description:
+      "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
+    demo: "https://sufficientgrounds.juanliao.net/",
+    github: "https://github.com/blueberryliaojuan/SufficientGround-1",
+    detailPage: "/work/SufficientGrounds",
+    image: "/img/sufficientGrounds/sufficientGroundsMock00.jpg",
+  },
+
+  {
+    id: "project02",
+    name: "Dish Ordering System",
+    category: "Software Development",
+    tabIndex: 1,
+    scope: "Front-End Project",
+    skills: [
+      "HTML",
+      "CSS",
+      "JS",
+      "Bootstrap",
+      "JS Plugin",
+      "Adobe Illustrator",
+    ],
+    description:
+      "A web application that allows users to order food online. It includes a user-friendly interface, a menu display, and a shopping cart feature.",
+    demo: "https://juanskitchen.juanliao.net/",
+    github: "https://github.com/blueberryliaojuan/Juan-s-Kitchen",
+    detailPage: "/work/DishOrdering",
+    image: "/img/dishOrder/orderSystemMock00.jpg",
+  },
+
   {
     id: "project04",
     name: "VGBC",
