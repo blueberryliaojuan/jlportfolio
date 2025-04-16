@@ -54,8 +54,27 @@
     @apply rounded-full w-13 h-13 text-xl  flex items-center justify-center;
   }
 
+  .detail-section {
+    @apply p-4 lg:p-12 grid sm:grid-cols-1 lg:grid-cols-2 sm:gap-4 lg:gap-8;
+  }
+  .detail-section-item {
+    @apply p-4  lg:p-16  flex flex-col w-full;
+  }
+  .detail-section-item:nth-of-type(2) {
+    @apply mt-8 lg:mt-0;
+  }
+  .hero-section {
+    @apply flex flex-col md:flex-row items-center justify-center;
+  }
+  .detail-project-text {
+    @apply p-4 lg:p-12 md:w-1/2 text-center md:text-left;
+  }
+  .detail-project-description {
+    @apply mt-8 text-left lg:mt-16 lg:pr-24;
+  }
+
   .detail-subtitle {
-    @apply font-bold text-klein-900 text-center mb-12;
+    @apply font-bold text-klein-900 text-center;
   }
 
   .detail-card-title {

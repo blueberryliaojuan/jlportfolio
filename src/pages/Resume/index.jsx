@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SideBar from "@/components/layout/SideBar";
 import { Outlet } from "react-router-dom";
+
 function Resume() {
   return (
     <div className="flex flex-col min-h-screen">

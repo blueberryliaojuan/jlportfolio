@@ -46,14 +46,14 @@ const SideBar = ({ currentSection }) => {
             }  hover:text-klein-900`}
             onClick={() => handleClick(item.text, index)}
           >
-            {/* 图标 */}
+            {/* icons */}
             <FontAwesomeIcon
               icon={item.icon}
               className={`text-lg  ${
                 activeIndex === index ? "text-klein-600" : "text-stack-400"
               } group-hover:text-klein-900`}
             />
-            {/* 文本 */}
+            {/* text */}
             <span>{item.text}</span>
           </li>
         ))}

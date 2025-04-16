@@ -13,7 +13,9 @@ const Header = () => {
 
   // Handle menu state when it's toggled
   const handleStateChange = (state) => {
-    setMenuOpen(state.isOpen);
+    if (menuOpen !== state.isOpen) {
+      setMenuOpen(state.isOpen);
+    }
   };
 
   // 根据当前路径set active
@@ -139,7 +141,7 @@ const Header = () => {
                 position: "fixed",
                 top: 0,
                 right: 0,
-                zIndex: 40,
+                zIndex: 99999,
               },
               bmMenu: {
                 background: "#FEFEFE",

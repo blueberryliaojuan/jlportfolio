@@ -63,9 +63,9 @@ const home = () => {
             <a
               href="/assets/cv.pdf"
               download
-              className="flex items-center btn mt-0 lg:mt-8"
+              className="flex items-center btn mt-4 lg:mt-8"
             >
-              <FontAwesomeIcon icon={faDownload} className="w-6 h-6" />
+              <FontAwesomeIcon icon={faDownload} className="w-6 h-6 " />
               Download my CV
             </a>
           </div>

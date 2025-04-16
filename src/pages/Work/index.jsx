@@ -137,7 +137,7 @@ const ProjectShowcase = () => {
     });
   };
 
-  // 更新鼠标位置
+  // update the button position
   const [buttonVisible, setButtonVisible] = useState(false);
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -154,7 +154,7 @@ const ProjectShowcase = () => {
       <Header />
       <main className="flex flex-col flex-1 bg-gray-100">
         {/* Tab Section */}
-        <div className="flex justify-end">
+        <div className="flex justify-center md:justify-end">
           <Tab
             className="mb-4 mr-4"
             initialActiveTab={tabIndex} //  `filter`
@@ -164,9 +164,9 @@ const ProjectShowcase = () => {
 
         {/* Content Section */}
 
-        <div className="flex flex-1 flex-wrap items-start justify-between gap-6 mx-14 lg:mx-16">
+        <div className="flex flex-col-reverse lg:flex-row flex-1 flex-wrap items-start justify-between lg:gap-6 mx-6 lg:mx-16">
           {/* Left Section */}
-          <div className="flex-1  space-y-4 lg:pl-16 mt-40">
+          <div className="flex-1 space-y-4 pl-0 lg:pl-16 mt-8 lg:mt-40">
             <div className="space-x-4">
               <div className="roundIcon font-bold bg-canary-300 text-klein-900 mb-2">
                 {`0${currentProjectIndex + 1}`}
@@ -227,7 +227,7 @@ const ProjectShowcase = () => {
           >
             <Link
               to={filteredData[currentProjectIndex].detailPage}
-              className="w-3/4 "
+              className="lg:w-3/4"
             >
               <img
                 src={filteredData[currentProjectIndex].image}
@@ -253,7 +253,7 @@ const ProjectShowcase = () => {
           </div>
         </div>
         {/* Navigation */}
-        <div className="flex  h-48 justify-end items-start w-full mt-6 px-4 pr-60">
+        <div className="flex  h-48  justify-center lg:justify-end items-start w-full mt-16 lg:mt-6 px-4 lg:pr-60">
           <button
             className={`mr-4 roundIcon  text-white  ${
               filteredData.length === 1

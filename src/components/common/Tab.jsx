@@ -36,13 +36,13 @@ const TabSlider = ({ initialActiveTab = 0, onTabChange }) => {
   };
 
   return (
-    <div className="relative bg-gray-100 p-8 flex items-center justify-center">
+    <div className="relative bg-gray-100 py-8 md:p-8 flex items-center justify-center">
       <div className="relative flex bg-white rounded-full overflow-hidden">
         {tabs.map((tab, index) => (
           <button
             key={tab}
             ref={(el) => (tabsRef.current[index] = el)}
-            className={`relative z-10 px-4 py-2 font-semibold text-sm transition-all duration-300 cursor-pointer ${
+            className={`relative z-10 px-4 py-2 md:font-semibold text-sm transition-all duration-300 cursor-pointer ${
               activeTab === index
                 ? "text-canary-300"
                 : "text-klein-900 hover:text-klein-600 "

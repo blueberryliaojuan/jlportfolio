@@ -76,7 +76,7 @@ const SufficientGround = () => {
       <main className="flex-1 bg-gray-100 ">
         <div className="py-12">
           {/* Hero Section */}
-          <section className="p-12 flex flex-col md:flex-row items-center justify-center">
+          <section className="detail-section hero-section ">
             <div className="md:w-1/2 flex justify-center">
               <img
                 src={projectData.src}
@@ -84,7 +84,7 @@ const SufficientGround = () => {
                 className="rounded-lg shadow-lg"
               />
             </div>
-            <div className="md:w-1/2 text-center md:text-left p-12">
+            <div className=" detail-project-text">
               <h2 className="heading4 font-bold text-gray-700">
                 {projectData.scope}
               </h2>
@@ -143,7 +143,7 @@ const SufficientGround = () => {
           </section>
 
           {/* Project Introduction Section */}
-          <section className="p-12 grid md:grid-cols-2 gap-8">
+          <section className="detail-section">
             <div className="p-16  ">
               <h2 className="heading2 font-bold text-klein-900">
                 Project Introduction
@@ -173,7 +173,7 @@ const SufficientGround = () => {
           </section>
 
           {/* design */}
-          <section className="p-12 grid md:grid-cols-2 gap-8">
+          <section className="detail-section">
             <div className="p-4  flex flex-col h-full ">
               <div className="w-full h-full py-8">
                 <Swiper
@@ -185,7 +185,7 @@ const SufficientGround = () => {
                   }}
                   spaceBetween={20}
                   slidesPerView={1}
-                  className="h-full rounded-lg"
+                  className="h-full w-full rounded-lg"
                 >
                   {brandingImages.map((image, index) => (
                     <SwiperSlide
@@ -231,12 +231,12 @@ const SufficientGround = () => {
           </section>
 
           {/* website */}
-          <section className="p-12 grid md:grid-cols-2 gap-8">
+          <section className="detail-section ">
             <div className="  p-16  ">
               <h2 className="heading2 font-bold text-klein-900">
                 Website Overview
               </h2>
-              <p className="p mt-4 text-gray-700">
+              <div className="p mt-4 text-gray-700">
                 The project aimed to create a responsive website for "Sufficient
                 Grounds Coffee Shop" featuring six main pages: Home, About,
                 Menu, Products, How to Brew, and Contact.
@@ -272,7 +272,7 @@ const SufficientGround = () => {
                 I made sure that the website was designed with user experience
                 in mind, ensuring it’s easy to navigate and accessible across
                 devices, providing a seamless experience for visitors.
-              </p>
+              </div>
             </div>
 
             {/* when we use more than one Swiper, we need to assign a unique pagination element container to each <Swiper>， pagination.el property */}
@@ -309,66 +309,62 @@ const SufficientGround = () => {
           </section>
 
           {/* Features & Functionality */}
-          <section className="p-12">
-            <h2 className="heading2 detail-subtitle">
-              Features & Functionality
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title ">Feature</h3>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Intuitive Navigation
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  The website features a clear menu structure, making it easy
-                  for users to quickly find information across pages like Home,
-                  Menu, and Contact.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Mobile Responsiveness
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  The site is fully responsive, offering a seamless experience
-                  on mobile devices, ensuring functionality and a clean layout
-                  on all screen sizes.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Easy-to-Read Content
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  I used legible fonts and high-contrast colors to ensure that
-                  all text is easy to read, improving user accessibility.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Consistent Branding
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  The design maintains a consistent visual identity, using
-                  matching colors and fonts to reinforce the brand and create a
-                  cohesive experience.
-                </p>
-              </div>
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title">Function</h3>
-                <p className="p font-bold mt-4 text-gray-700">Menu Display</p>
-                <p className="p mt-2 text-gray-700">
-                  The Menu page showcases all products in an organized,
-                  easy-to-read format, with interactive elements to enhance user
-                  engagement.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">Contact Form</p>
-                <p className="p mt-2 text-gray-700">
-                  A user-friendly form with clear fields and validation,
-                  allowing visitors to easily send inquiries.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  How to Brew Section
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Provides customers with helpful brewing tips, offering
-                  educational content on how to prepare their favorite coffee.
-                </p>
-              </div>
+          <h2 className="heading2 detail-subtitle">Features & Functionality</h2>
+          <section className="detail-section ">
+            <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
+              <h3 className="heading3 detail-card-title ">Feature</h3>
+              <p className="p font-bold mt-4 text-gray-700">
+                Intuitive Navigation
+              </p>
+              <p className="p mt-2 text-gray-700">
+                The website features a clear menu structure, making it easy for
+                users to quickly find information across pages like Home, Menu,
+                and Contact.
+              </p>
+              <p className="p font-bold mt-4 text-gray-700">
+                Mobile Responsiveness
+              </p>
+              <p className="p mt-2 text-gray-700">
+                The site is fully responsive, offering a seamless experience on
+                mobile devices, ensuring functionality and a clean layout on all
+                screen sizes.
+              </p>
+              <p className="p font-bold mt-4 text-gray-700">
+                Easy-to-Read Content
+              </p>
+              <p className="p mt-2 text-gray-700">
+                I used legible fonts and high-contrast colors to ensure that all
+                text is easy to read, improving user accessibility.
+              </p>
+              <p className="p font-bold mt-4 text-gray-700">
+                Consistent Branding
+              </p>
+              <p className="p mt-2 text-gray-700">
+                The design maintains a consistent visual identity, using
+                matching colors and fonts to reinforce the brand and create a
+                cohesive experience.
+              </p>
+            </div>
+            <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
+              <h3 className="heading3 detail-card-title">Function</h3>
+              <p className="p font-bold mt-4 text-gray-700">Menu Display</p>
+              <p className="p mt-2 text-gray-700">
+                The Menu page showcases all products in an organized,
+                easy-to-read format, with interactive elements to enhance user
+                engagement.
+              </p>
+              <p className="p font-bold mt-4 text-gray-700">Contact Form</p>
+              <p className="p mt-2 text-gray-700">
+                A user-friendly form with clear fields and validation, allowing
+                visitors to easily send inquiries.
+              </p>
+              <p className="p font-bold mt-4 text-gray-700">
+                How to Brew Section
+              </p>
+              <p className="p mt-2 text-gray-700">
+                Provides customers with helpful brewing tips, offering
+                educational content on how to prepare their favorite coffee.
+              </p>
             </div>
           </section>
 
@@ -397,94 +393,82 @@ const SufficientGround = () => {
           </div> */}
 
           {/* Code Practices & Workflow */}
-          <section className="p-12">
-            <h2 className="heading2 detail-subtitle">
-              Code Practices & Development Workflow
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title ">
-                  Organization & Efficiency
-                </h3>
-                <p className="p font-bold mt-4 text-gray-700">
-                  CSS Optimization
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  I utilized CSS variables to maintain consistent styling across
-                  the site, ensuring efficient updates and reducing repetitive
-                  code.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Reusable Functions
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Wrote JavaScript functions for filtering data, avoiding
-                  redundancy and improving maintainability.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Data Management
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  I saved data in a JSON file and implemented JavaScript
-                  functions to handle data filtering, ensuring a streamlined and
-                  dynamic user experience.
-                </p>
-              </div>
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title">
-                  Development Workflow
-                </h3>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Version Control
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Using Git, I tracked changes systematically, making it easy to
-                  manage iterations and collaborate while safeguarding progress.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Debugging and Testing
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Employed browser developer tools and iterative testing to
-                  troubleshoot and refine features efficiently.
-                </p>
-                <p className="p font-bold mt-4 text-gray-700">
-                  Task Management
-                </p>
-                <p className="p mt-2 text-gray-700">
-                  Broke down the development process into manageable steps,
-                  staying organized and ensuring steady progress.
-                </p>
-              </div>
+          <h2 className="heading2 detail-subtitle">
+            Code Practices & Development Workflow
+          </h2>
+          <section className="detail-section  ">
+            <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
+              <h3 className="heading3 detail-card-title ">
+                Organization & Efficiency
+              </h3>
+              <p className="p font-bold mt-4 text-gray-700">CSS Optimization</p>
+              <p className="p mt-2 text-gray-700">
+                I utilized CSS variables to maintain consistent styling across
+                the site, ensuring efficient updates and reducing repetitive
+                code.
+              </p>
+              <p className="p font-bold mt-4 text-gray-700">
+                Reusable Functions
+              </p>
+              <p className="p mt-2 text-gray-700">
+                Wrote JavaScript functions for filtering data, avoiding
+                redundancy and improving maintainability.
+              </p>
+              <p className="p font-bold mt-4 text-gray-700">Data Management</p>
+              <p className="p mt-2 text-gray-700">
+                I saved data in a JSON file and implemented JavaScript functions
+                to handle data filtering, ensuring a streamlined and dynamic
+                user experience.
+              </p>
+            </div>
+            <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
+              <h3 className="heading3 detail-card-title">
+                Development Workflow
+              </h3>
+              <p className="p font-bold mt-4 text-gray-700">Version Control</p>
+              <p className="p mt-2 text-gray-700">
+                Using Git, I tracked changes systematically, making it easy to
+                manage iterations and collaborate while safeguarding progress.
+              </p>
+              <p className="p font-bold mt-4 text-gray-700">
+                Debugging and Testing
+              </p>
+              <p className="p mt-2 text-gray-700">
+                Employed browser developer tools and iterative testing to
+                troubleshoot and refine features efficiently.
+              </p>
+              <p className="p font-bold mt-4 text-gray-700">Task Management</p>
+              <p className="p mt-2 text-gray-700">
+                Broke down the development process into manageable steps,
+                staying organized and ensuring steady progress.
+              </p>
             </div>
           </section>
 
           {/* Agile Methodology */}
-          <section className="p-12">
-            <h2 className="heading2 detail-subtitle">Agile Methodology</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <img
-                  src="/img/sufficientGrounds/sufficientGroundsAgile00.jpg"
-                  alt="agile methodology chart"
-                />
-              </div>
-              <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
-                <h3 className="heading3 detail-card-title">
-                  Development Workflow
-                </h3>
+          <h2 className="heading2 detail-subtitle">Agile Methodology</h2>
+          <section className="detail-section  ">
+            <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
+              <img
+                src="/img/sufficientGrounds/sufficientGroundsAgile00.jpg"
+                alt="agile methodology chart"
+              />
+            </div>
+            <div className="p-16 bg-whitish rounded-lg flex flex-col h-full">
+              <h3 className="heading3 detail-card-title">
+                Development Workflow
+              </h3>
 
-                <p className="p mt-2 text-gray-700">
-                  The project followed Agile principles to ensure iterative
-                  development and continuous collaboration. Weekly sprints were
-                  used to break down the project into manageable tasks,
-                  prioritize features, and maintain progress. Regular meetings
-                  facilitated seamless communication between the designer and
-                  developer, ensuring alignment with user needs and project
-                  goals. Feedback loops allowed for quick adjustments, resulting
-                  in a more user-focused and polished website.
-                </p>
-              </div>
+              <p className="p mt-2 text-gray-700">
+                The project followed Agile principles to ensure iterative
+                development and continuous collaboration. Weekly sprints were
+                used to break down the project into manageable tasks, prioritize
+                features, and maintain progress. Regular meetings facilitated
+                seamless communication between the designer and developer,
+                ensuring alignment with user needs and project goals. Feedback
+                loops allowed for quick adjustments, resulting in a more
+                user-focused and polished website.
+              </p>
             </div>
           </section>
         </div>

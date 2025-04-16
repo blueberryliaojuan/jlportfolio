@@ -52,7 +52,7 @@ const Vgbc = () => {
       <main className="flex-1 bg-gray-100 ">
         <div className="py-12">
           {/* Hero Section */}
-          <section className="p-12 flex flex-col md:flex-row items-center justify-center">
+          <section className="detail-section hero-section">
             <div className="md:w-1/2 flex justify-center">
               <img
                 src={projectData.src}
@@ -60,7 +60,7 @@ const Vgbc = () => {
                 className="rounded-lg "
               />
             </div>
-            <div className="md:w-1/2 text-center md:text-left p-12">
+            <div className=" detail-project-text">
               <h2 className="heading4 font-bold text-gray-700">
                 {projectData.scope}
               </h2>
@@ -131,9 +131,9 @@ const Vgbc = () => {
             </div>
           </section>
 
-          {/* Overview Section */}
+          {/* Problem Statement */}
 
-          <section className="p-12 grid md:grid-cols-2 gap-8">
+          <section className="detail-section">
             <div className="  p-16  ">
               <h2 className="heading2 font-bold text-klein-900">
                 Problem Statement
@@ -149,7 +149,7 @@ const Vgbc = () => {
                 intuitive, and tailored to a more mature audience.
               </p>
               <p className="p font-bold mt-4 text-gray-700">User Needs</p>
-              <p className="p mt-2 text-gray-700">
+              <div className="p mt-2 text-gray-700">
                 <ul>
                   <li>
                     Mobile-first design to ensure seamless accessibility and
@@ -164,7 +164,7 @@ const Vgbc = () => {
                     a visit and exploring faith.
                   </li>
                 </ul>
-              </p>
+              </div>
               <p className="p font-bold mt-4 text-gray-700">
                 Business Requirements
               </p>
@@ -236,12 +236,11 @@ const Vgbc = () => {
           </section>
 
           {/* UI/UX */}
-          <section className="p-12">
-            <h2 className="heading2 detail-subtitle">Process Overview</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-16  flex flex-col h-full">
+          <h2 className="heading2 detail-subtitle">Process Overview</h2>
+          <section>
+            <div className="detail-section">
+              <div className="detail-section-item">
                 <h3 className="heading3 text-klein-900 ">User Persona</h3>
-
                 <div className="w-full h-full">
                   <Swiper
                     modules={[Pagination]}
@@ -267,7 +266,7 @@ const Vgbc = () => {
                   </Swiper>
                 </div>
               </div>
-              <div className="p-16  flex flex-col h-full">
+              <div className="detail-section-item">
                 <h3 className="heading3 text-klein-900 ">User Scenario</h3>
                 <div className="w-full h-full">
                   <Swiper
@@ -295,8 +294,8 @@ const Vgbc = () => {
                 </div>
               </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-16  flex flex-col h-full">
+            <div className="detail-section">
+              <div className="detail-section-item">
                 <h3 className="heading3 text-klein-900 ">Empathy Map</h3>
                 <div className="w-full h-full">
                   <Swiper
@@ -323,21 +322,21 @@ const Vgbc = () => {
                   </Swiper>
                 </div>
               </div>
-              <div className="p-16  flex flex-col h-full">
+              <div className="detail-section-item">
                 <h3 className="heading3 text-klein-900 ">Journey Map</h3>
                 <div className="w-full h-full">
                   <img src="/img/vgbc/journeyMap.jpg" alt="Journey map" />
                 </div>
               </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-16  flex flex-col h-full">
+            <div className="detail-section">
+              <div className="detail-section-item">
                 <h3 className="heading3 text-klein-900 ">User Flow</h3>
                 <div className="w-full h-full">
                   <img src="/img/vgbc/userFlow.png" alt="Journey map" />
                 </div>
               </div>
-              <div className="p-16  flex flex-col h-full">
+              <div className="detail-section-item">
                 <h3 className="heading3 text-klein-900 ">User Feedback</h3>
                 <div className="w-full h-full">
                   <div className="m-8">
@@ -363,7 +362,7 @@ const Vgbc = () => {
                     quickly, which was a positive response. However, they
                     suggested a few improvements:
                   </p>
-                  <p className="p mt-2 text-gray-700">
+                  <div className="p mt-2 text-gray-700">
                     <ul>
                       <li>
                         Sermon Access: Users would like the sermons to be
@@ -383,7 +382,7 @@ const Vgbc = () => {
                         fresh and relevant.
                       </li>
                     </ul>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
