@@ -25,7 +25,7 @@ function Skills() {
     <div className="bg-gray-100 min-h-screen py-12">
       <div className="container mx-auto px-12">
         <AnimatedTitle title="Core Skills" />
-        <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-6 gap-12 justify-center items-center p-20 bg-whitish mt-8 rounded-lg">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-12  justify-center items-center p-4 lg:p-20 bg-whitish mt-8 rounded-lg">
           {skills.map((skill, index) => (
             <div key={index} className="flex flex-col items-center">
               <img

@@ -15,7 +15,7 @@ import "./index.css";
 const projectData = {
   id: "project01",
   name: "Sufficient Grounds Coffee Shop",
-  category: "Software Development",
+  category: "Web Development",
   scope: "Front-End Project",
   skills: ["HTML", "CSS", "Vanilla JS", "AGILE"],
   description:

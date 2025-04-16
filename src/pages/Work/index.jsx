@@ -12,7 +12,7 @@ const allData = [
   {
     id: "project03",
     name: "Ines Piano Academy",
-    category: "Software Development",
+    category: "Web Development",
     tabIndex: 1,
     scope: "Front-End Project and Marketing",
     skills: [
@@ -34,7 +34,7 @@ const allData = [
   {
     id: "project01",
     name: "Sufficient Grounds Coffee Shop",
-    category: "Software Development",
+    category: "Web Development",
     tabIndex: 1,
     scope: "Front-End Project",
     skills: ["HTML", "CSS", "Vanilla JS", "AGILE"],
@@ -49,7 +49,7 @@ const allData = [
   {
     id: "project02",
     name: "Dish Ordering System",
-    category: "Software Development",
+    category: "Web Development",
     tabIndex: 1,
     scope: "Front-End Project",
     skills: [
@@ -77,9 +77,10 @@ const allData = [
     skills: ["Figma", "Adobe Illustrator"],
     description:
       "A web application for a piano academy that allows users to browse courses and instructors. It includes a user-friendly interface and a responsive design.",
-    demo: "/work/vgbc",
-    figma: "",
-    github: "#",
+    demo: "",
+    figma:
+      "https://www.figma.com/design/8gM6LQL61OLEZai0MqE1WO/VGBC?node-id=220-604&p=f&t=EKgEJFDvIykNSZmg-0",
+    github: "",
     detailPage: "/work/VGBC",
     image: "/img/vgbc/mockup00.jpg",
   },
@@ -87,7 +88,7 @@ const allData = [
 
 const filterToIndexMap = {
   0: 0, // "All"
-  1: 1, // "Software Development"
+  1: 1, // "Web Development"
   2: 2, // "UI/UX Design & Others"
 };
 
@@ -194,28 +195,45 @@ const ProjectShowcase = () => {
 
             {/* Buttons */}
             <div className="flex gap-4 mt-8">
-              <Link
-                to={filteredData[currentProjectIndex].demo}
-                target="_blank"
-                className="btn  self-end"
-              >
-                Live Demo
-                <FontAwesomeIcon
-                  icon={faArrowRight}
-                  className="ml-2 -rotate-45"
-                />
-              </Link>
-              <Link
-                to={filteredData[currentProjectIndex].github}
-                target="_blank"
-                className="btn  self-end"
-              >
-                Github
-                <FontAwesomeIcon
-                  icon={faArrowRight}
-                  className="ml-2 -rotate-45"
-                />
-              </Link>
+              {filteredData[currentProjectIndex]?.demo && (
+                <Link
+                  to={filteredData[currentProjectIndex].demo}
+                  target="_blank"
+                  className="btn self-end"
+                >
+                  Live Demo
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="ml-2 -rotate-45"
+                  />
+                </Link>
+              )}
+              {filteredData[currentProjectIndex].github && (
+                <Link
+                  to={filteredData[currentProjectIndex].github}
+                  target="_blank"
+                  className="btn  self-end"
+                >
+                  Github
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="ml-2 -rotate-45"
+                  />
+                </Link>
+              )}
+              {filteredData[currentProjectIndex]?.figma && (
+                <Link
+                  to={filteredData[currentProjectIndex].figma}
+                  target="_blank"
+                  className="btn self-end"
+                >
+                  Figma
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="ml-2 -rotate-45"
+                  />
+                </Link>
+              )}
             </div>
           </div>
 

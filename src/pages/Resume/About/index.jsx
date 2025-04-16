@@ -50,12 +50,12 @@ export default function About() {
     <div className=" bg-gray-100 min-h-screen py-12">
       <div className="container mx-auto px-12">
         <AnimatedTitle title="Personal Overview" />
-        <div className="bg-whitish mt-8 rounded-xl p-16">
+        <div className="bg-whitish mt-8 rounded-xl p-4 pt-12 lg:p-16">
           {/* About Me Section */}
           <section>
             <h2 className="heading3 font-bold text-klein-900">About Me</h2>
             <div className="flex flex-col lg:flex-row items-center">
-              <div className="lg:w-3/5 mb-6 lg:mb-0  p-24">
+              <div className="lg:w-3/5 mb-6 lg:mb-0 p-4 lg:p-24">
                 <p className="heading3  mb-4">
                   👋 Hello! I'm Juan. A goal-driven, fast learner, and
                   detail-oriented web designer and coder, currently based in
@@ -103,7 +103,7 @@ export default function About() {
               My Value
             </h2>
             <div className="grid grid-cols-1   lg:grid-cols-3  gap-16">
-              <div className="p-12  rounded-lg border-klein-900 border-2">
+              <div className="p-4 lg:p-12  rounded-lg border-klein-900 border-2">
                 <h3 className="heading3 font-bold text-center text-klein-900 mb-8">
                   Faith & Compassion
                 </h3>
@@ -116,7 +116,7 @@ export default function About() {
                   authentic connections with those around me.
                 </p>
               </div>
-              <div className="p-12 rounded-lg border-klein-900 border-2">
+              <div className="p-4 lg:p-12 rounded-lg border-klein-900 border-2">
                 <h3 className="heading3 font-bold text-center text-klein-900 mb-8">
                   Continuous Growth
                 </h3>
@@ -130,7 +130,7 @@ export default function About() {
                   well-rounded solutions.
                 </p>
               </div>
-              <div className="p-12 rounded-lg border-klein-900 border-2">
+              <div className="p-4 lg:p-12 rounded-lg border-klein-900 border-2">
                 <h3 className="heading3 font-bold text-center text-klein-900 mb-8">
                   Empowering Others
                 </h3>

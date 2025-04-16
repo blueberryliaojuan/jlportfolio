@@ -12,7 +12,7 @@ import { Navigation, Pagination } from "swiper/modules";
 const projectData = {
   id: "project03",
   name: "Ines Piano Academy",
-  category: "Software Development",
+  category: "Web Development",
   scope: "Front-End Project and Marketing",
   skills: [
     "HTML",
@@ -204,10 +204,8 @@ const Ines = () => {
                 <ul>
                   <li>No established branding or logo</li>
                   <li>No official website</li>
-                  <li>
-                    No email marketing or SEO presence Minimal social media
-                    activity
-                  </li>
+                  <li>No email marketing or SEO presence</li>
+                  <li>Minimal social media activity</li>
                 </ul>
               </p>
             </div>
@@ -301,6 +299,30 @@ const Ines = () => {
                   Integrate Google Analytics for visitor tracking and behavior
                   analysis.
                 </p>
+                <div className="mt-6 flex gap-4">
+                  <Link
+                    to={projectData.demo}
+                    target="_blank"
+                    className="btn  self-end"
+                  >
+                    Live Demo
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="ml-2 -rotate-45"
+                    />
+                  </Link>
+                  <Link
+                    to={projectData.github}
+                    target="_blank"
+                    className="btn  self-end"
+                  >
+                    Github
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="ml-2 -rotate-45"
+                    />
+                  </Link>
+                </div>
               </div>
             </div>
 

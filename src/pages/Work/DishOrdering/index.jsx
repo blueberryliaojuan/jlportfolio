@@ -13,7 +13,7 @@ import { Navigation } from "swiper/modules";
 const projectData = {
   id: "project02",
   name: "Dish Ordering System",
-  category: "Software Development",
+  category: "Web Development",
   tabIndex: 1,
   scope: "Front-End Project",
   skills: ["HTML", "CSS", "JS", "Bootstrap", "JS Plugin", "Adobe Illustrator"],

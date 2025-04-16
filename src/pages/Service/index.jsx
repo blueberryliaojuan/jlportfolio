@@ -7,7 +7,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const services = [
   {
     id: 1,
-    title: "Software Development",
+    title: "Web Development",
     items: [
       "Proficient in HTML, CSS, JavaScript, Vue and React",
       "Experience building responsive, scalable web applications",
