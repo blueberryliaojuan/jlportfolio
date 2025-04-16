@@ -16,23 +16,20 @@
 
 ## Setup Instructions
 
-### github: [JL](https://github.com/blueberryliaojuan/bloomie.git)
+### github: [JL](https://github.com/blueberryliaojuan/jlportfolio)
 
 ### Dependencies:
 
 - CSS: [tailwindcss](https://tailwindcss.com/)
 - Router: [react-router-dom]（https://www.npmjs.com/package/react-router-dom）
-<!-- - classname: [classnames](https://www.npmjs.com/package/classnames) -->
 - Icon：[Font Awesome](https://fontawesome.com/)
-- JSON Server: [typicode/json-server](https://github.com/typicode/json-server)
+<!-- - JSON Server: [typicode/json-server](https://github.com/typicode/json-server) -->
 
 ### Installation Steps:
 
 1. Install project dependencies: npm i
-2. Set up the JSON Server:
-   npm db
-3. Start the development server: npm run dev
+<!-- 2. Set up the JSON Server:
+   npm db -->
+2. Start the development server: npm run dev
 
 ---
-
-## Challenges and what I Learned:
