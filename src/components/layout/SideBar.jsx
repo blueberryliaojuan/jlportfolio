@@ -25,7 +25,7 @@ const SideBar = ({ currentSection }) => {
   ];
 
   return (
-    <div className="w-1/6 bg-gray-100 p-8 py-16 relative">
+    <div className="w-full bg-gray-100 p-8 py-16 relative">
       {/* 移动的背景和指示器 */}
       <div
         className="absolute left-4 w-11/12 h-12 bg-whitish rounded-lg transition-transform duration-300"

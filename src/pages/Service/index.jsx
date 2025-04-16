@@ -65,7 +65,7 @@ const service = () => {
                 </ul>
                 <Link
                   to={`/work?filter=${service.id}`}
-                  className="btn w-40 self-end"
+                  className="btn w-40 self-center mt-8"
                 >
                   View All
                   <FontAwesomeIcon
