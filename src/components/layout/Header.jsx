@@ -75,7 +75,7 @@ const Header = () => {
                 : "header-item-default"
             }
           >
-            Resume
+            Bio
           </Link>
           <Link
             to="/work"
@@ -174,7 +174,7 @@ const Header = () => {
               to="/resume/experience"
               className={getLinkClassName("/resume")}
             >
-              Resume
+              Bio
             </Link>
             <Link to="/work" className={getLinkClassName("/work")}>
               Work
