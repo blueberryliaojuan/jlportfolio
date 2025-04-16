@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const tabs = ["All", "Software Development", "UI/UX Design & Others"];
+const tabs = ["All", "Web Development", "UI/UX Design & Others"];
 
 const TabSlider = ({ initialActiveTab = 0, onTabChange }) => {
   // ✅ 正确解构 props
