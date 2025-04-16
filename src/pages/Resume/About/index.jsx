@@ -2,8 +2,8 @@ import AnimatedTitle from "@/components/common/AnimatedTitle.jsx";
 // import avatar from "@/assets/img/photo.jpg";
 const photos = [
   {
-    src: "/img/about/img01.jpg",
-    alt: "Lake view",
+    src: "/img/about/img09.jpg",
+    alt: "logs on the beach",
     cols: "col-span-2",
     rows: "row-span-1",
   },
@@ -26,8 +26,8 @@ const photos = [
     rows: "row-span-2",
   },
   {
-    src: "/img/about/img09.jpg",
-    alt: "logs on the beach",
+    src: "/img/about/img01.jpg",
+    alt: "a couple on the beach",
     cols: "col-span-1",
     rows: "row-span-1",
   },
