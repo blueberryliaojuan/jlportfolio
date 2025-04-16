@@ -145,9 +145,9 @@ const Header = () => {
               },
               bmMenu: {
                 background: "#FEFEFE",
-                padding: "2.5em 1.5em 0",
+                padding: "1rem",
                 fontSize: "1.15em",
-                maxHeight: "30vh", // Set the maximum height of the menu (30% of the viewport height)
+                maxHeight: "48vh", // Set the maximum height of the menu
                 overflowY: "auto", // Enable scrolling if content exceeds max height
               },
               bmOverlay: {
