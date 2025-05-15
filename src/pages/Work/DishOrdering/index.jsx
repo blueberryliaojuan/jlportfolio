@@ -121,7 +121,7 @@ const DishOrdering = () => {
               </p>
             </div>
             <div>
-              <img src="/img/dishOrder/Juan-Mockup.png" alt="website mockup" />
+              <img src="/img/dishOrder/Juan-Mockup.jpg" alt="website mockup" />
             </div>
           </section>
 
