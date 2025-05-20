@@ -31,8 +31,6 @@ const carouselImages = [
   "/img/dishOrder/dishOrdering02.jpg",
 ];
 const DishOrdering = () => {
-  // const prevRef = useRef(null);
-  // const nextRef = useRef(null);
   return (
     <>
       <Header></Header>
