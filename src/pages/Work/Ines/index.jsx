@@ -25,7 +25,7 @@ const projectData = {
   ],
   description:
     "This project involved designing the digital presence of Ines Piano Academy, a piano school in Vancouver with over 10 years of experience. The work included designing a cohesive brand identity, creating a modern, responsive website,  and implementing SEO strategies to increase online visibility. The website features a bilingual language switch, student showcase, and detailed program descriptions to attract and engage a diverse audience.",
-  demo: "https://inesacademy.juanliao.net/",
+  demo: "https://inesacademy.juanliao.site/",
   github: "https://github.com/blueberryliaojuan/INES",
   src: "/img/ines/InesMockup01.jpg",
 };

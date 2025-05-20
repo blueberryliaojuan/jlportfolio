@@ -26,7 +26,7 @@ const allData = [
     ],
     description:
       "A web application for a piano academy that allows users to browse courses and instructors. It includes a user-friendly interface and a responsive design.",
-    demo: "https://inesacademy.juanliao.net/",
+    demo: "https://inesacademy.juanliao.site/",
     github: "https://github.com/blueberryliaojuan/INES",
     detailPage: "/work/InesPianoAcademy",
     image: "/img/ines/InesMockup00.jpg",
@@ -40,7 +40,7 @@ const allData = [
     skills: ["HTML", "CSS", "Vanilla JS", "AGILE"],
     description:
       "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
-    demo: "https://sufficientgrounds.juanliao.net/",
+    demo: "https://sufficientgrounds.juanliao.site/",
     github: "https://github.com/blueberryliaojuan/SufficientGround-1",
     detailPage: "/work/SufficientGrounds",
     image: "/img/sufficientGrounds/sufficientGroundsMock00.jpg",
@@ -62,7 +62,7 @@ const allData = [
     ],
     description:
       "A web application that allows users to order food online. It includes a user-friendly interface, a menu display, and a shopping cart feature.",
-    demo: "https://juanskitchen.juanliao.net/",
+    demo: "https://juanskitchen.juanliao.site/",
     github: "https://github.com/blueberryliaojuan/Juan-s-Kitchen",
     detailPage: "/work/DishOrdering",
     image: "/img/dishOrder/orderSystemMock01.jpg",

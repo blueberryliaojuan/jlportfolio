@@ -19,7 +19,7 @@ const projectData = {
   skills: ["HTML", "CSS", "JS", "Bootstrap", "JS Plugin", "Adobe Illustrator"],
   description:
     "Juan’s Kitchen is a responsive restaurant website that I designed and developed to streamline the in-house dining experience. Originally created as a basic promotional site, it has since evolved into an interactive ordering system. Customers can scan a unique QR code at their table to browse the menu, view dish photos, and place orders directly from their phones. This project demonstrates my skills in responsive design, image optimization, and front-end development using Bootstrap and JavaScript plugins.",
-  demo: "https://juanskitchen.juanliao.net/",
+  demo: "https://juanskitchen.juanliao.site/",
   github: "https://github.com/blueberryliaojuan/Juan-s-Kitchen",
   detailPage: "/work/DishOrdering",
   src: "/img/dishOrder/orderSystemMock00.jpg",

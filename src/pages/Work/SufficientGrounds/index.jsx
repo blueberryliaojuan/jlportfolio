@@ -19,7 +19,7 @@ const projectData = {
   skills: ["HTML", "CSS", "Vanilla JS", "AGILE"],
   description:
     "A web application for a coffee shop that allows users to browse the menu and products. It includes a user-friendly interface and a responsive design.",
-  demo: "https://sufficientgrounds.juanliao.net/",
+  demo: "https://sufficientgrounds.juanliao.site/",
   github: "/work",
   src: "/img/sufficientGrounds/sufficientGroundsMock02.jpg",
 };

@@ -40,9 +40,7 @@ const home = () => {
         <div className="flex-1 mx-auto max-w-screen-xl flex flex-col-reverse md:flex-row w-full justify-between items-center ">
           <div className="flex flex-col items-start justify-center  bg-gray-100  w-7/12 m-0 lg:m-24">
             {/* Title */}
-            <h1 className=" heading2 text-klein-900 mb-4">
-              Front-End Developer
-            </h1>
+            <h1 className=" heading2 text-klein-900 mb-4">Web Developer</h1>
 
             {/* Subtitle */}
             <div className="mb-6">
