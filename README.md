@@ -1,4 +1,4 @@
-![Logo](./public/assets/images/logo.png)
+![Logo](./public/logo.png)
 
 # Juan Liao Portfolio
 
