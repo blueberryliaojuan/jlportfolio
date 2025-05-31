@@ -38,11 +38,11 @@ const Header = () => {
           <Link to="/" className={getLinkClassName("/")}>
             Home
           </Link>
-          <Link to="/service" className={getLinkClassName("/service")}>
+          {/* <Link to="/service" className={getLinkClassName("/service")}>
             Service
-          </Link>
-          <Link to="/resume/experience" className={getLinkClassName("/resume")}>
-            Bio
+          </Link> */}
+          <Link to="/profile" className={getLinkClassName("/resume")}>
+            Profile
           </Link>
           <Link to="/work" className={getLinkClassName("/work")}>
             Work
@@ -107,22 +107,14 @@ const Header = () => {
                   Home
                 </Link>
               </li>
+
               <li>
                 <Link
-                  to="/service"
-                  className={getLinkClassName("/service")}
+                  to="/profile"
+                  className={getLinkClassName("/profile")}
                   onClick={closeMenu}
                 >
-                  Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/resume/experience"
-                  className={getLinkClassName("/resume/experience")}
-                  onClick={closeMenu}
-                >
-                  Bio
+                  Profile
                 </Link>
               </li>
               <li>

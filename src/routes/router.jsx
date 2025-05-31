@@ -2,11 +2,11 @@ import Home from "@/pages/Home";
 import NotFound from "@/pages/NotFound";
 import Work from "@/pages/Work";
 import Service from "@/pages/Service";
-import Resume from "@/pages/Resume";
-import Experience from "@/pages/Resume/Experience";
-import Education from "@/pages/Resume/Education";
-import Skills from "@/pages/Resume/Skills";
-import About from "@/pages/Resume/About";
+import Profile from "@/pages/Profile";
+// import Experience from "@/pages/Profile/Experience";
+// import Education from "@/pages/Profile/Education";
+// import Skills from "@/pages/Profile/Skills";
+// import About from "@/pages/Profile/About";
 import SufficientGrounds from "@/pages/Work/SufficientGrounds";
 import DishOrdering from "@/pages/Work/DishOrdering";
 import Ines from "@/pages/Work/Ines";
@@ -19,14 +19,14 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "",
-    element: <Resume />,
-    children: [
-      { path: "/resume/experience", element: <Experience /> },
-      { path: "/resume/education", element: <Education /> },
-      { path: "/resume/skills", element: <Skills /> },
-      { path: "/resume/about", element: <About /> },
-    ],
+    path: "/profile",
+    element: <Profile />,
+    // children: [
+    //   { path: "/Profile/experience", element: <Experience /> },
+    //   { path: "/Profile/education", element: <Education /> },
+    //   { path: "/Profile/skills", element: <Skills /> },
+    //   { path: "/Profile/about", element: <About /> },
+    // ],
   },
   {
     path: "/work",
