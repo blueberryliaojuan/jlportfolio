@@ -48,6 +48,9 @@
   .btn {
     @apply gap-2 bg-canary-300 text-klein-900 font-semibold py-2 px-8 rounded-full cursor-pointer hover:text-klein-600;
   }
+  .btn-small {
+    @apply gap-2 bg-canary-300 text-klein-900 font-semibold text-sm py-1 px-4 rounded-full cursor-pointer hover:text-klein-600;
+  }
 
   .roundIcon {
     @apply rounded-full w-13 h-13 text-xl  flex items-center justify-center;

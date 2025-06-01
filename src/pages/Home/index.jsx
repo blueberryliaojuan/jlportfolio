@@ -34,7 +34,7 @@ const home = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen pt-28">
       <Header />
       <main className="flex flex-1 flex-col bg-gray-100">
         <div className="flex-1 mx-auto max-w-screen-xl flex flex-col-reverse md:flex-row w-full justify-between items-center ">

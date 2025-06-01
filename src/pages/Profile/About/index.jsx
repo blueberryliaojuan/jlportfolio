@@ -48,17 +48,16 @@ const food = [
 export default function About() {
   return (
     <div className=" bg-gray-100 mt-12 container mx-auto">
-      <AnimatedTitle title="Personal Overview" />
+      <AnimatedTitle title="About Me" />
       <div className="bg-whitish mt-8 rounded-xl p-4 pt-12 lg:p-16">
         {/* About Me Section */}
         <section>
-          <h2 className="heading3 font-bold text-klein-900">About Me</h2>
+          <h2 className="heading3 font-bold text-klein-900">I'm Juan Liao</h2>
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-3/5 mb-6 lg:mb-0 p-4 lg:p-24">
               <p className="heading3  mb-4">
-                👋 Hello! I'm Juan. A goal-driven, fast learner, and
-                detail-oriented web designer and coder, currently based in
-                Vancouver, BC.
+                👋 Hello! I'm a goal-driven, fast learner, and detail-oriented
+                web designer and coder, currently based in Vancouver, BC.
               </p>
               <p className="heading3">
                 I’m passionate about creating seamless, user-focused digital

@@ -1,0 +1,9 @@
+.nav-link {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+.nav-link.active {
+  background-color: blue !important;
+  color: #fff !important;
+  font-weight: bold !important;
+}

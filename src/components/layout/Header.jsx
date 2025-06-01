@@ -13,18 +13,27 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  // 关闭菜单
+  // closes the mobile menu when a link is clicked.
   const closeMenu = () => setMenuOpen(false);
 
-  // 获取链接的类名，根据当前路径设置 active 状态
+  // Determines the appropriate CSS class for a navigation link based on the current path.
   const getLinkClassName = (path) => {
-    return location.pathname === path
-      ? "text-klein-900 bg-canary-300 px-4 py-2 rounded-md"
-      : "text-klein-900 hover:bg-canary-300 px-4 py-2 rounded-md";
+    // Check if the path is the root "/" and if the current location is also the root.
+    // This ensures the "Home" link is active only when the user is on the homepage.
+    if (path === "/" && location.pathname === "/") {
+      return "text-klein-900 bg-canary-300 px-4 py-2 rounded-md";
+    }
+    // Check if the path is not "/" and if the current location starts with the given path.
+    // This ensures links like "Work" are active for both "/work" and its subpaths like "/work/InesPianoAcademy".
+    if (path !== "/" && location.pathname.startsWith(path)) {
+      return "text-klein-900 bg-canary-300 px-4 py-2 rounded-md";
+    }
+    // Default class for links that are not active.
+    return "text-klein-900 hover:bg-canary-300 px-4 py-2 rounded-md";
   };
 
   return (
-    <header className="p-4 bg-whitish shadow-md h-20 flex items-center">
+    <header className="fixed top-0 left-0  z-50 w-full p-12 bg-whitish  h-28 flex items-center">
       <div className="container mx-auto max-w-screen-xl flex justify-between items-center">
         {/* Logo Section */}
         <div className="text-2xl font-bold">
@@ -38,10 +47,7 @@ const Header = () => {
           <Link to="/" className={getLinkClassName("/")}>
             Home
           </Link>
-          {/* <Link to="/service" className={getLinkClassName("/service")}>
-            Service
-          </Link> */}
-          <Link to="/profile" className={getLinkClassName("/resume")}>
+          <Link to="/profile" className={getLinkClassName("/profile")}>
             Profile
           </Link>
           <Link to="/work" className={getLinkClassName("/work")}>

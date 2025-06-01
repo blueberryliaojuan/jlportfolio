@@ -36,7 +36,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="bg-gray-100 mt-24">
+    <div className="bg-gray-100 mt-24 mb-24">
       <div className="container mx-auto">
         <AnimatedTitle title="Experience" />
 
